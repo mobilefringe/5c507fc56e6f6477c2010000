@@ -148,7 +148,7 @@
                     keys: ["name", "description", "tags", "keywords", "store.name"],
                     newsletter_email: "",
                     menu_items: MenuItems,
-                    propertyLogo: "//codecloud.cdn.speedyrails.net/sites/5c507fc56e6f6477c2010000/image/jpeg/1548040950000/CentreLogo_300x200px_HighResolution.jpg",
+                    propertyLogo: "//codecloud.cdn.speedyrails.net/sites/5c507fc56e6f6477c2010000/image/png/1548798567257/LanghamSquareLogo.png",
                     smallerHeader: false,
                     isSticky: 100,
                     headerReady: false,
