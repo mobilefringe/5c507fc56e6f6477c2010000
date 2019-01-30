@@ -5,24 +5,7 @@
         </div>
     </div>
 </template>
-<style>
-    .page_title {
-        /*border-top:1px solid #aea99e;*/
-        border-bottom:1px solid #aea99e;
-        height: 35px;
-        line-height: 35px;
-    }
-    #pages_container img{
-        width: 100%;
-        height: auto;
-    }
-    #pages_container h3{
-        color: #000; 
-        font-size: 24px; 
-        font-weight: inherit; 
-        font-family: inherit; 
-    }
-</style>
+
 <script>
     define(["Vue", "vuex", "moment", "moment-timezone", "vue-moment"], function(Vue, Vuex, moment, tz, VueMoment) {
         return Vue.component("directions-component", {
