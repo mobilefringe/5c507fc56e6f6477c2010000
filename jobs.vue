@@ -109,12 +109,6 @@
                     }]);
                     return this.processedJobs;
                 }
-            },
-            methods: {
-                shareURL(slug) {
-                    var share_url = "http://rollinghills.ca/jobs/" + slug;
-                    return share_url;
-                }
             }
         });
     });
