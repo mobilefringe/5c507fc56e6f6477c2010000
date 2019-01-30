@@ -129,10 +129,9 @@
 </style>
 
 <script>
-    define(["Vue", "vuex", "moment", "moment-timezone", "vue-moment", "vue-meta", "vue-lazy-load", "vue!utility.vue"], function(Vue, Vuex, moment, tz, VueMoment, Meta, VueLazyload,MyPlugin) {
+    define(["Vue", "vuex", "moment", "moment-timezone", "vue-moment", "vue-meta", "vue-lazy-load"], function(Vue, Vuex, moment, tz, VueMoment, Meta, VueLazyload) {
         Vue.use(Meta);
         Vue.use(VueLazyload);
-        Vue.use(MyPlugin)
         return Vue.component("promos-component", {
             template: template, // the variable template will be injected
             data: function() {
