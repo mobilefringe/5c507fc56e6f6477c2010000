@@ -87,6 +87,7 @@ require(['Vue', 'vuex', 'vue2-filters', 'vue_router', 'routes', 'datastore', 'vu
     /* bootstrap app */
     const vm = new Vue({
         el: '#app',
+        mixins: [mixin],
         data: function() {
             return {
                 dataLoaded: false,
