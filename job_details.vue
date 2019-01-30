@@ -13,6 +13,7 @@
 				<social-sharing :url="$root.shareURL('jobs',currentJob.slug)" :title="currentJob.title" :description="currentJob.body" :quote="_.truncate(currentJob.description, {'length': 99})" twitter-user="" :media="currentJob.image_url" inline-template >
                     <div class="blog-social-share">
                         <div class="social_share">
+                        Share: 
                             <network network="facebook">
                                 <i class="fa fa-facebook"></i>
                             </network>
