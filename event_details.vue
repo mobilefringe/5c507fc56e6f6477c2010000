@@ -1,58 +1,5 @@
 <template>
 	<div class="event_dets_container page_container" v-if="currentEvent">
-		<div class="row">
-			<div class="col-sm-4 event_logo_container">
-				<div >
-					<!--<img :src="currentPromo.store.store_front_url_abs" :alt="currentPromo.store.name" class="hidden_phone"/>-->
-					<img
-                    v-if="!currentPromo.store.no_store_logo"
-                    class="store_img hidden_phone"
-                    :src="currentPromo.store.store_front_url_abs"
-                    alt
-                  >
-                  <div v-else class="no_logo_container hidden_phone">
-                    <img
-                      class="store_img "
-                      src="//www.mallmaverick.com/system/site_images/photos/000/041/782/original/transparent_logo.png?1533845225"
-                      alt
-                    >
-                        <h1 class="no_logo_text">
-                        {{ currentPromo.store.name }}
-                          <!--<div class="store_text">-->
-                          <!--  <h2></h2>-->
-                          <!--</div>-->
-                        </h1>
-                    </div>
-					<img  v-if="!_.includes(currentPromo.image_url, 'missing')" :src="currentPromo.image_url" :alt="currentPromo.name" class="promo_image show_phone"/>
-				</div>
-				<div style="margin-left:0; margin-top: 25px;">
-					<h1>{{currentPromo.name}}</h1>
-					<router-link :to="'/stores/'+currentPromo.store.slug"><p class="promo_store_name">{{currentPromo.store.name}}</p></router-link>
-					<p class="promo_div_date">{{currentPromo.start_date | moment("MMM D", timezone)}} - {{currentPromo.end_date | moment("MMM D", timezone)}}</p>
-				</div>
-			</div>
-			<div class="col-sm-8 event_image_container text-left">
-				<img v-if="!_.includes(currentPromo.image_url, 'missing')" :src="currentPromo.image_url" :alt="currentPromo.name" class="hidden_phone"/>
-				<div class="event_desc_container">
-				    <div class="text-left promo_description">
-    				    <p v-html="currentPromo.rich_description"></p>
-    				</div>
-				</div>
-				<social-sharing :url="$root.shareURL('promotions',currentPromo.slug)" :title="currentPromo.title" :description="currentPromo.body" :quote="_.truncate(currentPromo.description, {'length': 99})" twitter-user="" :media="currentPromo.image_url" inline-template >
-                    <div class="blog-social-share text-left">
-                        <p style="display: inline-block;">Share: </p>
-                        <div class="social_share" style="display: inline-block;">
-                            <network network="facebook">
-                                <i class="fa fa-facebook"></i>
-                            </network>
-                            <network network="twitter">
-                                <i class="fa fa-twitter"></i>
-                            </network>
-                        </div>
-                    </div>
-                </social-sharing>
-			</div>
-		</div>
 		<!--<div class="row">-->
 		<!--	<div class="col-sm-4 event_logo_container hidden_phone">-->
 		<!--		<div v-if="currentEvent.eventable_type == 'Property'">-->
