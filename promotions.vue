@@ -148,6 +148,7 @@
                     var date = moment(this.selectedDate).date();
                     this.daysInMonth[date-1].isActive = true;
                 });
+                console.log("this", this)
                 // this.$store.dispatch("getData", "promotions").then(response => {
                     
                 // }, error => {
