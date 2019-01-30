@@ -24,7 +24,7 @@
         "sub_menu": [
             {
                 "name": "Guest Services ",
-                "href": "'/pages/'+$root.site+'-guest-services'"
+                "href": "/pages/langhamsquare-guest-services"
             },
             {
                 "name": "Mall Hours ",
