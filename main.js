@@ -57,6 +57,7 @@ require(['Vue', 'vuex', 'vue2-filters', 'vue_router', 'routes', 'datastore', 'vu
         },
         methods: {
             shareURL(page,slug){
+                console.log("page, slug", page, slug)
                 var share_url= "http://www.langhamsquare.ca/" + page + "/" + slug;
                 return share_url;
             }
