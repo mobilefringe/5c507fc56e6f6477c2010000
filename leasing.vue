@@ -25,11 +25,11 @@
                 }
             },
             beforeRouteUpdate(to, from, next) {
-                // this.updateCurrentPage(to.params.id);
+                this.updateCurrentPage();
                 next();
             },
             created(){
-            //   this.updateCurrentPage(this.id);
+              this.updateCurrentPage();
             },
             computed: {
                 ...Vuex.mapGetters([
