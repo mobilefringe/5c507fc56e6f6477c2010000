@@ -33,7 +33,7 @@ define([], function() {
             component: view('default'),
             children: [{
                 path: '',
-                component: view('businesses'),
+                component: view('restaurants'),
                 name: 'businessList'
             }]
         },
