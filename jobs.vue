@@ -19,7 +19,7 @@
     						</router-link>
     					</span>
     					<div class="text-right  col-sm-6" v-if="promo">
-        					<social-sharing :url="$root.shareURL(promo.slug)" :title="promo.title" :description="promo.body" :quote="_.truncate(promo.description, {'length': 99})" twitter-user="" :media="promo.image_url" inline-template >
+        					<social-sharing :url="$root.shareURL('jobs',promo.slug)" :title="promo.title" :description="promo.body" :quote="_.truncate(promo.description, {'length': 99})" twitter-user="" :media="promo.image_url" inline-template >
                             <div class="blog-social-share">
                                 <div class="social_share">
                                     <network network="facebook">
