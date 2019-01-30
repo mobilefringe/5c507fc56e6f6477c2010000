@@ -52,6 +52,12 @@ require(['Vue', 'vuex', 'vue2-filters', 'vue_router', 'routes', 'datastore', 'vu
     Vue.use(VueI18n);
     Vue.use(SocialSharing);
     var mixin = {
+        data: function() {
+            return {
+                dataLoaded: false,
+                toggle_sitemap: false
+            }
+        },
         created: function () {
             console.log('mixin hook called')
         },
