@@ -10,6 +10,18 @@
 				<h1>{{currentJob.name}}</h1>
 				<p class="job_store_name">{{currentJob.store.name}}</p>
 				<p class="job_div_date">{{currentJob.start_date | moment("MMM D", timezone)}} - {{currentJob.end_date | moment("MMM D", timezone)}}</p>
+				<social-sharing :url="$root.shareURL('jobs',currentJob.slug)" :title="currentJob.title" :description="currentJob.body" :quote="_.truncate(currentJob.description, {'length': 99})" twitter-user="" :media="currentJob.image_url" inline-template >
+                    <div class="blog-social-share">
+                        <div class="social_share">
+                            <network network="facebook">
+                                <i class="fa fa-facebook"></i>
+                            </network>
+                            <network network="twitter">
+                                <i class="fa fa-twitter"></i>
+                            </network>
+                        </div>
+                    </div>
+                </social-sharing>
 			</div>
 		</div>
 		<div class="row" style="margin-left:0;">
