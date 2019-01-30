@@ -1,54 +1,6 @@
 <template>
 	<div class="event_dets_container page_container" v-if="currentEvent">
-		<div class="row">
-			<div class="col-sm-4 event_logo_container hidden_phone">
-				<div v-if="currentEvent.eventable_type == 'Property'">
-					<img v-if="property.default_logo_url" :src="//codecloud.cdn.speedyrails.net/sites/5beddc9a6e6f6454f6030000/image/jpeg/1544725705000/EventsImage-PlaceHolder-3Thumbnail.jpg" :alt="property.name"/>
-				</div>
-				<div v-else>
-				    <img v-lazy="currentEvent.store.image_url" :alt="urrentEvent.store.name">
-				</div>
-			</div>
-			<div class="col-sm-8 event_image_container text-left">
-				<img v-if="_.includes(currentEvent.image_url, 'missing') != true" :src="currentEvent.image_url" :alt="currentEvent.name"/>
-			</div>
-		</div>
-		<div class="row" style="margin-left:0; margin-top: 20px;">
-			<div class="col-sm-4 event_details_container text-left">
-				<div>
-					<h1>{{currentEvent.name}}</h1>
-					<p class="event_div_date">{{currentEvent.start_date | moment("MMM D", timezone)}} - {{currentEvent.end_date | moment("MMM D", timezone)}}</p>
-				</div>
-			</div>
-			<div class="col-sm-8 event_desc_container">
-				<div class="text-left event_description">
-					<p v-html="currentEvent.rich_description"></p>
-				</div>
-			</div>
-		</div>
-		<div class="event_promo_container" v-if="storePromos">
-		    <div class="promo_container_title text-left all_caps"> OTHER {{property.name | uppercase }} EVENTS</div>
-		    <div class="row event_promo_dets text-left is-table-row border_bottom" v-for="promo in storePromos">
-		        <div class="col-sm-7" >
-		        <div class="promo_div_image text-left" v-if="_.includes(promo.image_url, 'missing')">
-		            <img :src="property.default_logo_url"/>
-		        </div>
-		        <div class="promo_div_image text-left" v-else v-lazy-container="{ selector: 'img' }">
-		            <img :data-src="promo.image_url" data-loading='//codecloud.cdn.speedyrails.net/sites/5b16b9686e6f6426c91e0000/image/png/1521035009104/Screen Shot 2018-03-14 at 9.43.24 AM.png' alt=""/>
-		        </div>
-		        </div>
-		        <div class="col-sm-5 promo_div_dets">
-		            <p class="promo_div_name promo_div_event_name">{{promo.name | uppercase}}</p>
-		            <p class="promo_div_date">{{promo.start_date | moment("MMM D", timezone)}} - {{promo.end_date | moment("MMM D", timezone)}}</p>
-		            <p class="promo_div_description">{{promo.description_short}}</p>
-					<span class="feature_read_more">
-						<router-link :to="'/events/'+promo.slug" class="mobile_readmore" >
-							<p class="feature-readmore" :aria="promo.name">View Event Details <i class="fa fa-chevron-right pull-right" aria-hidden="true"></i></p>
-						</router-link>
-					</span>
-		        </div>
-		    </div>
-		</div>
+		
 	</div>
 </template>
 <style>
