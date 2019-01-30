@@ -2,6 +2,9 @@
 	<div class="event_dets_container page_container" v-if="currentEvent">
 		<div class="row">
 			<div class="col-sm-4 event_logo_container hidden_phone">
+				<div v-if="currentEvent.eventable_type == 'Property'">
+					<img v-if="property.default_logo_url" :src="//codecloud.cdn.speedyrails.net/sites/5beddc9a6e6f6454f6030000/image/jpeg/1544725705000/EventsImage-PlaceHolder-3Thumbnail.jpg" :alt="property.name"/>
+				</div>
 				
 			</div>
 			<div class="col-sm-8 event_image_container text-left">
