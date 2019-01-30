@@ -5,9 +5,9 @@
 				<div>
 					<!--<img v-lazy="currentJob.store.store_front_url_abs" alt=""/>-->
 					<img
-                    v-if="!currentPromo.store.no_store_logo"
+                    v-if="!currentJob.store.no_store_logo"
                     class="store_img hidden_phone"
-                    :src="currentPromo.store.store_front_url_abs"
+                    :src="currentJob.store.store_front_url_abs"
                     alt
                   >
                   <div v-else class="no_logo_container hidden_phone">
@@ -17,7 +17,7 @@
                       alt
                     >
                         <h1 class="no_logo_text">
-                        {{ currentPromo.store.name }}
+                        {{ currentJob.store.name }}
                           <!--<div class="store_text">-->
                           <!--  <h2></h2>-->
                           <!--</div>-->
