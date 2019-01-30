@@ -54,8 +54,7 @@ require(['Vue', 'vuex', 'vue2-filters', 'vue_router', 'routes', 'datastore', 'vu
     var mixin = {
         data: function() {
             return {
-                site: 'langhamsquare',
-                toggle_sitemap: false
+                site: 'langhamsquare'
             }
         },
         created: function () {
