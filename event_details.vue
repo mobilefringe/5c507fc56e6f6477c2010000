@@ -10,7 +10,7 @@
 				</div>
 			</div>
 			<div class="col-sm-8 event_image_container text-left">
-				<!--<img v-if="_.includes(currentEvent.image_url, 'missing') != true" :src="currentEvent.image_url" :alt="currentEvent.name"/>-->
+				<img v-if="_.includes(currentEvent.image_url, 'missing') != true" :src="currentEvent.image_url" :alt="currentEvent.name"/>
 			</div>
 		</div>
 		<div class="row" style="margin-left:0; margin-top: 20px;">
