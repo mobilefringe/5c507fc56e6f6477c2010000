@@ -35,7 +35,7 @@
             						</router-link>
             					</span>
             					<div class="text-right  col-sm-4 col-xs-12" v-if="promo">
-                					<social-sharing :url="shareURL(promo.slug)" :title="promo.title" :description="promo.body" :quote="_.truncate(promo.description, {'length': 99})" twitter-user="" :media="promo.image_url" inline-template >
+                					<social-sharing :url="shareURL('promotions',promo.slug)" :title="promo.title" :description="promo.body" :quote="_.truncate(promo.description, {'length': 99})" twitter-user="" :media="promo.image_url" inline-template >
                                         <div class="blog-social-share">
                                             <div class="social_share">
                                                 <network network="facebook">
