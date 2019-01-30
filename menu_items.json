@@ -58,7 +58,7 @@
         "show_sub_menu": false,
         "sub_menu": [
             {
-                "name": "Mall Hours ",
+                "name": "Centre Amenities ",
                 "href": "/hours"
             },
             {
