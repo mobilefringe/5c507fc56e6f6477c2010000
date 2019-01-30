@@ -101,11 +101,20 @@ define([], function() {
             children: [{
                 path: '',
                 component: view('directions'),
-                name: 'direction'
+                name: 'directions'
             }]
         },
         {
             path: '/contact_us',
+            component: view('default'),
+            children: [{
+                path: '',
+                component: view('contact_us'),
+                name: 'contactUs'
+            }]
+        },
+        {
+            path: '/leasing',
             component: view('default'),
             children: [{
                 path: '',
