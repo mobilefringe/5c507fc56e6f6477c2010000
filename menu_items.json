@@ -53,7 +53,7 @@
     },
     {
         "name": "Visitor Info",
-        "id": "mallInfo_link",
+        "id": "visitorInfo_link",
         "href": "",
         "show_sub_menu": false,
         "sub_menu": [
