@@ -24,7 +24,7 @@
     					<p v-html="currentEvent.rich_description"></p>
     				</div>
     			</div>
-    			<social-sharing :url="$root.shareURL('events',currentEvent.slug)" :title="currentEvent.title" :description="currentEvent.body" :quote="_.truncate(currentEvent.body, {'length': 99})" twitter-user="" :media="currentPromo.image_url" inline-template >
+    			<social-sharing :url="$root.shareURL('events',currentEvent.slug)" :title="currentEvent.title" :description="currentEvent.body" :quote="_.truncate(currentEvent.body, {'length': 99})" twitter-user="" :media="currentEvent.image_url" inline-template >
                     <div class="blog-social-share text-left">
                         <p style="display: inline-block;">Share: </p>
                         <div class="social_share" style="display: inline-block;">
@@ -41,14 +41,6 @@
 			
 			
 		</div>
-		<!--<div class="row" style="margin-left:0; margin-top: 20px;">-->
-			
-		<!--	<div class="col-sm-8 event_desc_container">-->
-		<!--		<div class="text-left event_description">-->
-		<!--			<p v-html="currentEvent.rich_description"></p>-->
-		<!--		</div>-->
-		<!--	</div>-->
-		<!--</div>-->
 		<div class="event_promo_container" v-if="storePromos">
 		    <div class="promo_container_title text-left all_caps"> OTHER {{property.name | uppercase }} EVENTS</div>
 		    <div class="row event_promo_dets text-left is-table-row border_bottom" v-for="promo in storePromos">
