@@ -33,15 +33,7 @@
             },
             props:['id'],
             beforeRouteUpdate(to, from, next) {
-                host_name = this.property.mm_host.replace("http:", "");
-                this.$store.dispatch('LOAD_PAGE_DATA', {
-                    url: host_name + "/pages/" + to.params.id + ".json"
-                }).then(response => {
-                    this.currentPage = response.data;
-                }, error => {
-                    console.error("Could not retrieve data from server. Please check internet connection and try again.");
-                    this.$router.replace({ path: '/'});
-                });
+                this.updateCurrentPage(to.params.id);
                 next();
             },
             created(){
