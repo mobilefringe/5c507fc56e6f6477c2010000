@@ -85,7 +85,7 @@ hr{
     font-family: trade_gothic;
     src: url('//mallmaverick.com/system/site_images/photos/000/003/998/original/TradeGothic-LT-Bold-CondensedNo20.ttf?1410896868');
 }
-$primary : #946f00;//d8a101;
+$primary : ##7b4fa2;//d8a101;
 $font_family : arial;
 $main_font_color : #000;
 #SearchTerms:focus{
