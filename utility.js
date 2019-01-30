@@ -19,7 +19,7 @@ define([], function () {
             return newObj;
         },
         shareURL(page,slug){
-            var share_url= "http://www.langhamsquare.ca/"+page+"/" + slug;
+            var share_url= "http://www.langhamsquare.ca/" + page + "/" + slug;
             return share_url;
         }
     }
