@@ -30,7 +30,7 @@
         "show_sub_menu": false
     },
         {
-        "name": "News",
+        "name": "Events",
         "id": "events_link",
         "href": "/events",
         "show_sub_menu": false
