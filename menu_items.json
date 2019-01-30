@@ -52,7 +52,7 @@
         ]
     },
     {
-        "name": "Mall Info",
+        "name": "Visitor Info",
         "id": "mallInfo_link",
         "href": "",
         "show_sub_menu": false,
