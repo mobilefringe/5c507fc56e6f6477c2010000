@@ -5,8 +5,8 @@
 		</div>
         <div class="page_container">
             <div class="row padding_tb_30" >
-            <img src="//codecloud.cdn.speedyrails.net/sites/5c507fc56e6f6477c2010000/image/jpeg/1548064342000/InsidePageImages_940x320px_SpecialtyLeasingPage.jpg" class="padding_tb_30" alt="">
-                <div class="page_body description_text text_left" v-html="currentPage.body">
+            <img src="//codecloud.cdn.speedyrails.net/sites/5c507fc56e6f6477c2010000/image/jpeg/1548064342000/InsidePageImages_940x320px_SpecialtyLeasingPage.jpg" class="" alt="">
+                <div class="page_body description_text text_left padding_tb_30" v-html="currentPage.body">
                     
                 </div>
             </div>
