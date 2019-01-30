@@ -29,7 +29,7 @@ define([], function() {
             }]
         },
         {
-            path: '/businesses',
+            path: '/restaurants',
             component: view('default'),
             children: [{
                 path: '',
