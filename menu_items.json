@@ -70,6 +70,17 @@
     {
         "name": "Contact Us",
         "id": "contact_link",
-        "href": "/contact_us"
+        "href": "",
+        "show_sub_menu": false,
+        "sub_menu": [
+            {
+                "name": "Centre Amenities ",
+                "href": "/pages/langhamsquare-centre-amenities"
+            },
+            {
+                "name": "Notice Board",
+                "href": "/pages/langhamsquare-centre-notice-board"
+            }
+        ]
     }
 ]
