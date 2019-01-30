@@ -263,10 +263,10 @@
                     year = moment(this.selectedDate).year();
                     this.selectedDate = moment([year, month, val]).format('MMM D, YYYY');
                 },
-                shareURL(slug){
-                    var share_url= "http://www.langhamsquare.ca/promotions/" + slug;
-                    return share_url;
-                },
+                // shareURL(slug){
+                //     var share_url= "http://www.langhamsquare.ca/promotions/" + slug;
+                //     return share_url;
+                // },
             }
         });
     });
