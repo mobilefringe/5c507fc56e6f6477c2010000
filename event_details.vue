@@ -20,10 +20,23 @@
 			<div class="col-sm-8 event_image_container text-left">
 				<img v-if="_.includes(currentEvent.image_url, 'missing') != true" :src="currentEvent.image_url" :alt="currentEvent.name"/>
 				<div class="event_desc_container">
-				<div class="text-left event_description">
-					<p v-html="currentEvent.rich_description"></p>
-				</div>
-			</div>
+    				<div class="text-left event_description">
+    					<p v-html="currentEvent.rich_description"></p>
+    				</div>
+    			</div>
+    			<social-sharing :url="$root.shareURL('promotions',currentPromo.slug)" :title="currentPromo.title" :description="currentPromo.body" :quote="_.truncate(currentPromo.description, {'length': 99})" twitter-user="" :media="currentPromo.image_url" inline-template >
+                    <div class="blog-social-share text-left">
+                        <p style="display: inline-block;">Share: </p>
+                        <div class="social_share" style="display: inline-block;">
+                            <network network="facebook">
+                                <i class="fa fa-facebook"></i>
+                            </network>
+                            <network network="twitter">
+                                <i class="fa fa-twitter"></i>
+                            </network>
+                        </div>
+                    </div>
+                </social-sharing>
 			</div>
 			
 			
