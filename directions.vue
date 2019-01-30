@@ -1,6 +1,6 @@
 <template>
     <div id="pages_container" v-if="currentPage">
-        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d20935.055695043622!2d-79.31602608038101!3d43.857888379183144!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89d4d432f17c12d7%3A0xdac106c5c9ff7436!2s8339+Kennedy+Rd%2C+Unionville%2C+ON+L3R+1J5!5e0!3m2!1sen!2sca!4v1548891273411" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d20935.055695043622!2d-79.31602608038101!3d43.857888379183144!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89d4d432f17c12d7%3A0xdac106c5c9ff7436!2s8339+Kennedy+Rd%2C+Unionville%2C+ON+L3R+1J5!5e0!3m2!1sen!2sca!4v1548891273411" width="100%" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
     </div>
 </template>
 <style>
