@@ -29,6 +29,15 @@ define([], function() {
             }]
         },
         {
+            path: '/businesses',
+            component: view('default'),
+            children: [{
+                path: '',
+                component: view('businesses'),
+                name: 'businessList'
+            }]
+        },
+        {
             path: '/promotions',
             component: view('default'),
             children: [{
