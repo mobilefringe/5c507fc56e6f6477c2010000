@@ -137,12 +137,24 @@
             watch: {
                 currentJob : function (){
                     if(this.currentJob != null) {
-                        if (this.currentJob.store != null && this.currentJob.store != undefined && _.includes(this.currentJob.store.store_front_url_abs, 'missing')) {
-                            this.currentJob.store.store_front_url_abs = "//codecloud.cdn.speedyrails.net/sites/5c507fc56e6f6477c2010000/image/jpeg/1548062300000/Mall_StoreLogo_600x600px_Template.jpg";
+                        // if (this.currentJob.store != null && this.currentJob.store != undefined && _.includes(this.currentJob.store.store_front_url_abs, 'missing')) {
+                        //     this.currentJob.store.store_front_url_abs = "//codecloud.cdn.speedyrails.net/sites/5c507fc56e6f6477c2010000/image/jpeg/1548062300000/Mall_StoreLogo_600x600px_Template.jpg";
+                        // }
+                        // else if (this.currentJob.store == null || this.currentJob.store == undefined) {
+                        //     this.currentJob.store = {};
+                        //     this.currentJob.store.store_front_url_abs =  "//codecloud.cdn.speedyrails.net/sites/5c507fc56e6f6477c2010000/image/jpeg/1548062300000/Mall_StoreLogo_600x600px_Template.jpg";
+                        // }
+                        if (this.currentPromo.store == null || this.currentPromo.store == undefined) {
+                            this.currentPromo.store = {};
+                            this.currentPromo.store.name =  this.property.name;
+                            this.currentPromo.store.no_store_logo = true
                         }
-                        else if (this.currentJob.store == null || this.currentJob.store == undefined) {
-                            this.currentJob.store = {};
-                            this.currentJob.store.store_front_url_abs =  "//codecloud.cdn.speedyrails.net/sites/5c507fc56e6f6477c2010000/image/jpeg/1548062300000/Mall_StoreLogo_600x600px_Template.jpg";
+                        else {
+                            if (_.includes(this.currentPromo.store.store_front_url_abs, 'missing')) {
+                              this.currentPromo.store.no_store_logo = true
+                            } else {
+                              this.currentPromo.store.no_store_logo = false
+                            }
                         }
                     var vm = this;
                     var temp_job = [];
