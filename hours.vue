@@ -65,7 +65,7 @@
                     this.dataloaded = true;
                     
                     var temp_repo = this.findRepoByName('Hours Side Image');
-                    if(temp_repo) {
+                    if(temp_repo && temp_repo.images) {
                         this.hoursSideImage = temp_repo.images[0];
                     } else {
                         this.hoursSideImage = {};
