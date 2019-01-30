@@ -31,7 +31,6 @@
                     currentPage: null
                 }
             },
-            props:['id'],
             beforeRouteUpdate(to, from, next) {
                 // this.updateCurrentPage(to.params.id);
                 next();
