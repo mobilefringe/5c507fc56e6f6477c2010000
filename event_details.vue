@@ -8,6 +8,10 @@
 				<div v-else>
 				    <img v-lazy="currentEvent.store.image_url" :alt="currentEvent.store.name">
 				</div>
+				<div>
+					<h1>{{currentEvent.name}}</h1>
+					<p class="event_div_date">{{currentEvent.start_date | moment("MMM D", timezone)}} - {{currentEvent.end_date | moment("MMM D", timezone)}}</p>
+				</div>
 			</div>
 			<div class="col-sm-8 event_image_container text-left">
 				<img v-if="_.includes(currentEvent.image_url, 'missing') != true" :src="currentEvent.image_url" :alt="currentEvent.name"/>
@@ -15,10 +19,7 @@
 		</div>
 		<div class="row" style="margin-left:0; margin-top: 20px;">
 			<div class="col-sm-4 event_details_container text-left">
-				<div>
-					<h1>{{currentEvent.name}}</h1>
-					<p class="event_div_date">{{currentEvent.start_date | moment("MMM D", timezone)}} - {{currentEvent.end_date | moment("MMM D", timezone)}}</p>
-				</div>
+				
 			</div>
 			<div class="col-sm-8 event_desc_container">
 				<div class="text-left event_description">
