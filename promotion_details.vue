@@ -38,7 +38,7 @@
     				    <p v-html="currentPromo.rich_description"></p>
     				</div>
 				</div>
-				<social-sharing :url="$root.shareURL('promotions',promo.slug)" :title="currentPromo.title" :description="currentPromo.body" :quote="_.truncate(currentPromo.description, {'length': 99})" twitter-user="" :media="currentPromo.image_url" inline-template >
+				<social-sharing :url="$root.shareURL('promotions',currentPromo.slug)" :title="currentPromo.title" :description="currentPromo.body" :quote="_.truncate(currentPromo.description, {'length': 99})" twitter-user="" :media="currentPromo.image_url" inline-template >
                     <div class="blog-social-share text-left">
                         <p style="display: inline-block;">Share: </p>
                         <div class="social_share" style="display: inline-block;">
