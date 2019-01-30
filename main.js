@@ -84,7 +84,7 @@ require(['Vue', 'vuex', 'vue2-filters', 'vue_router', 'routes', 'datastore', 'vu
         created() {
             this.loadData().then(response => {
                 this.dataLoaded = true;
-                this.property.default_logo_url = "http://via.placeholder.com/600/000/ccc";
+                this.property.default_logo_url = "//codecloud.cdn.speedyrails.net/sites/5c507fc56e6f6477c2010000/image/jpeg/1548062300000/Mall_StoreLogo_600x600px_Template.jpg";
             });
 
         },
