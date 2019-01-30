@@ -17,18 +17,7 @@
 				<div class="text-left job_description">
 					<p v-html="currentJob.rich_description"></p>
 				</div>
-				<social-sharing :url="$root.shareURL('jobs',currentJob.slug)" :title="currentJob.title" :description="currentJob.body" :quote="_.truncate(currentJob.description, {'length': 99})" twitter-user="" :media="currentJob.image_url" inline-template >
-                    <div class="blog-social-share">
-                        <div class="social_share">
-                            <network network="facebook">
-                                <i class="fa fa-facebook"></i>
-                            </network>
-                            <network network="twitter">
-                                <i class="fa fa-twitter"></i>
-                            </network>
-                        </div>
-                    </div>
-                </social-sharing>
+				
 			</div>
 		</div>
 		<div class="job_container" v-if="storeJobs.length > 0">
