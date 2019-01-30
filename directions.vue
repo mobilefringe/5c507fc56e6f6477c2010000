@@ -33,11 +33,11 @@
             },
             props:['id'],
             beforeRouteUpdate(to, from, next) {
-                this.updateCurrentPage(to.params.id);
+                // this.updateCurrentPage(to.params.id);
                 next();
             },
             created(){
-               this.updateCurrentPage(this.id);
+            //   this.updateCurrentPage(this.id);
             },
             computed: {
                 ...Vuex.mapGetters([
