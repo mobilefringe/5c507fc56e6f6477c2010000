@@ -96,6 +96,15 @@ define([], function() {
             }]
         },
         {
+            path: '/directions',
+            component: view('default'),
+            children: [{
+                path: '',
+                component: view('restaurants'),
+                name: 'restaurantList'
+            }]
+        },
+        {
             path: '/contact_us',
             component: view('default'),
             children: [{
