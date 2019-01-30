@@ -119,7 +119,7 @@
                 currentJob : function (){
                     if(this.currentJob != null) {
                         if (this.currentJob.store != null && this.currentJob.store != undefined && _.includes(this.currentJob.store.store_front_url_abs, 'missing')) {
-                            this.currentJob.store.store_front_url_abs = "//codecloud.cdn.speedyrails.net/sites/5beddc9a6e6f6454f6030000/image/jpeg/1544725705000/EventsImage-PlaceHolder-1-Thumbnail.jpg";
+                            this.currentJob.store.store_front_url_abs = "//codecloud.cdn.speedyrails.net/sites/5c507fc56e6f6477c2010000/image/jpeg/1548062300000/Mall_StoreLogo_600x600px_Template.jpg";
                         }
                         else if (this.currentJob.store == null || this.currentJob.store == undefined) {
                             this.currentJob.store = {};
