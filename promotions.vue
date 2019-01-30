@@ -134,6 +134,7 @@
         Vue.use(VueLazyload);
         return Vue.component("promos-component", {
             template: template, // the variable template will be injected
+            mixins: [mixin],
             data: function() {
                 return {
                     selectedDate: null,
