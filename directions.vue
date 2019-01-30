@@ -33,7 +33,7 @@
 </style>
 <script>
     define(["Vue", "vuex", "moment", "moment-timezone", "vue-moment"], function(Vue, Vuex, moment, tz, VueMoment) {
-        return Vue.component("page-details-component", {
+        return Vue.component("directions-component", {
             template: template, // the variable template will be injected,
             data: function() {
                 return {
