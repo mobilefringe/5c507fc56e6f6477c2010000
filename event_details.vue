@@ -1,5 +1,31 @@
 <template>
 	<div class="event_dets_container page_container" v-if="currentEvent">
+		<div class="row">
+			<div class="col-sm-4 event_logo_container hidden_phone">
+				<div v-if="currentEvent.eventable_type == 'Property'">
+					<img v-if="property.default_logo_url" :src="//codecloud.cdn.speedyrails.net/sites/5beddc9a6e6f6454f6030000/image/jpeg/1544725705000/EventsImage-PlaceHolder-3Thumbnail.jpg" :alt="property.name"/>
+				</div>
+				<div v-else>
+				    <img v-lazy="currentEvent.store.image_url" :alt="urrentEvent.store.name">
+				</div>
+			</div>
+			<div class="col-sm-8 event_image_container text-left">
+				<img v-if="_.includes(currentEvent.image_url, 'missing') != true" :src="currentEvent.image_url" :alt="currentEvent.name"/>
+			</div>
+		</div>
+		<div class="row" style="margin-left:0; margin-top: 20px;">
+			<div class="col-sm-4 event_details_container text-left">
+				<div>
+					<h1>{{currentEvent.name}}</h1>
+					<p class="event_div_date">{{currentEvent.start_date | moment("MMM D", timezone)}} - {{currentEvent.end_date | moment("MMM D", timezone)}}</p>
+				</div>
+			</div>
+			<div class="col-sm-8 event_desc_container">
+				<div class="text-left event_description">
+					<p v-html="currentEvent.rich_description"></p>
+				</div>
+			</div>
+		</div>
 		
 	</div>
 </template>
