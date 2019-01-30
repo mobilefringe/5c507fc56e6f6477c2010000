@@ -101,7 +101,7 @@ define([], function() {
             children: [{
                 path: '',
                 component: view('directions'),
-                name: 'restaurantList'
+                name: 'direction'
             }]
         },
         {
