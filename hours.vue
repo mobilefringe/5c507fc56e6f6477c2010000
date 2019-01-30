@@ -1,6 +1,6 @@
 <template>
     <div class="hours_page_container"> <!-- for some reason if you do not put an outer container div this component template will not render -->
-        <img style= "width: 100%;" :src="hoursSideImage.image_url" alt="" class="show_phone">  
+        <img v-if="hoursSideImage" style= "width: 100%;" :src="hoursSideImage.image_url" alt="" class="show_phone">  
         <div class="page_container">
             <div class="all_hours_container">
                 <div class="row">
