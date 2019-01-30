@@ -57,9 +57,9 @@ require(['Vue', 'vuex', 'vue2-filters', 'vue_router', 'routes', 'datastore', 'vu
         },
         methods: {
             shareURL(page,slug){
-            var share_url= "http://www.langhamsquare.ca/" + page + "/" + slug;
-            return share_url;
-        }
+                var share_url= "http://www.langhamsquare.ca/" + page + "/" + slug;
+                return share_url;
+            }
         }
     }
 
