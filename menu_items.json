@@ -80,6 +80,10 @@
             {
                 "name": "Leasing",
                 "href": "/leasing"
+            },
+            {
+                "name": "About",
+                "href": "/leasing"
             }
         ]
     }
