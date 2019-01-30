@@ -26,14 +26,14 @@
 			
 			
 		</div>
-		<div class="row" style="margin-left:0; margin-top: 20px;">
+		<!--<div class="row" style="margin-left:0; margin-top: 20px;">-->
 			
 		<!--	<div class="col-sm-8 event_desc_container">-->
 		<!--		<div class="text-left event_description">-->
 		<!--			<p v-html="currentEvent.rich_description"></p>-->
 		<!--		</div>-->
 		<!--	</div>-->
-		</div>
+		<!--</div>-->
 		<div class="event_promo_container" v-if="storePromos">
 		    <div class="promo_container_title text-left all_caps"> OTHER {{property.name | uppercase }} EVENTS</div>
 		    <div class="row event_promo_dets text-left is-table-row border_bottom" v-for="promo in storePromos">
