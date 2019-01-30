@@ -8,13 +8,14 @@
 				<div v-else>
 				    <img v-lazy="currentEvent.store.image_url" :alt="currentEvent.store.name">
 				</div>
+				<div class="event_details_container text-left">
+    				<div>
+    					<h1>{{currentEvent.name}}</h1>
+    					<p class="event_div_date">{{currentEvent.start_date | moment("MMM D", timezone)}} - {{currentEvent.end_date | moment("MMM D", timezone)}}</p>
+    				</div>
+    			</div>
 			</div>
-			<div class="col-sm-4 event_details_container text-left">
-				<div>
-					<h1>{{currentEvent.name}}</h1>
-					<p class="event_div_date">{{currentEvent.start_date | moment("MMM D", timezone)}} - {{currentEvent.end_date | moment("MMM D", timezone)}}</p>
-				</div>
-			</div>
+			
 			<div class="col-sm-8 event_image_container text-left">
 				<img v-if="_.includes(currentEvent.image_url, 'missing') != true" :src="currentEvent.image_url" :alt="currentEvent.name"/>
 			</div>
@@ -24,14 +25,14 @@
 				</div>
 			</div>
 		</div>
-		<!--<div class="row" style="margin-left:0; margin-top: 20px;">-->
+		<div class="row" style="margin-left:0; margin-top: 20px;">
 			
 		<!--	<div class="col-sm-8 event_desc_container">-->
 		<!--		<div class="text-left event_description">-->
 		<!--			<p v-html="currentEvent.rich_description"></p>-->
 		<!--		</div>-->
 		<!--	</div>-->
-		<!--</div>-->
+		</div>
 		<div class="event_promo_container" v-if="storePromos">
 		    <div class="promo_container_title text-left all_caps"> OTHER {{property.name | uppercase }} EVENTS</div>
 		    <div class="row event_promo_dets text-left is-table-row border_bottom" v-for="promo in storePromos">
