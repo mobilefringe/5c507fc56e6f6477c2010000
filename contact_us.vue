@@ -121,7 +121,9 @@
             created(){
                 this.loadData().then(response => {
                     this.dataloaded = true;
+                    if(response[0] && response[0]data){
                     this.currentPage = response[0].data;
+                    }
                     var temp_repo = this.findRepoByName('Contact Side Image');
                     if(temp_repo && temp_repo.images) {
                         this.sideImage = temp_repo.images[0];
