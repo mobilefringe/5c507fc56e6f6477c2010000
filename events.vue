@@ -107,12 +107,6 @@
                     _.sortBy(temp_promo, [function(o) { return o.start_date; }]);
                     return temp_promo;
                 }
-            },
-            methods: {
-                shareURL(slug){
-                    var share_url = "http://rollinghills.ca/events/" + slug;
-                    return share_url;
-                }
             }
         });
     });
