@@ -24,7 +24,7 @@
         "sub_menu": [
             {
                 "name": "Guest Services ",
-                "href": "/pages/"+this.$root.site+"-guest-services"
+                "href": "'/pages/'+$root.site+'-guest-services'"
             },
             {
                 "name": "Mall Hours ",
