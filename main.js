@@ -51,20 +51,7 @@ require(['Vue', 'vuex', 'vue2-filters', 'vue_router', 'routes', 'datastore', 'vu
     Vue.use(Vue2Filters);
     Vue.use(VueI18n);
     Vue.use(SocialSharing);
-    var mixin = {
-        data: function() {
-            return {
-                site: 'langhamsquare'
-            }
-        },
-        created: function () {
-            console.log('mixin hook called')
-        },
-        methods: {
-            
-        }
-    }
-
+    
     /* initialize router */
     const router = new VueRouter({
         mode: 'history',
@@ -88,7 +75,6 @@ require(['Vue', 'vuex', 'vue2-filters', 'vue_router', 'routes', 'datastore', 'vu
     /* bootstrap app */
     const vm = new Vue({
         el: '#app',
-        mixins: [mixin],
         data: function() {
             return {
                 dataLoaded: false,
