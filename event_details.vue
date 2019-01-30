@@ -2,12 +2,13 @@
 	<div class="event_dets_container page_container" v-if="currentEvent">
 		<div class="row">
 			<div class="col-sm-4 event_logo_container ">
-			<div class="hidden_phone"></div>
+			<div class="hidden_phone">
 				<div v-if="currentEvent.eventable_type == 'Property'">
 					<img v-if="property.default_logo_url" :src="property.default_logo_url" :alt="property.name"/>
 				</div>
 				<div v-else>
 				    <img v-lazy="currentEvent.store.image_url" :alt="currentEvent.store.name">
+				</div>
 				</div>
 				<div class="event_details_container text-left">
     				<div>
