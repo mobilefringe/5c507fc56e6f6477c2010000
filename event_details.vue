@@ -60,32 +60,7 @@
 	</div>
 </template>
 <style>
-    .event_logo_container,
-    .event_image_container,
-    .event_details_container,
-    .event_desc_container{
-        padding: 20px 10px;
-    }
-    .event_image_container img{
-        max-height: 300px;
-    }
-    .event_logo_container img{
-        border: 1px solid #aea99e;
-        width:300px;
-        height:300px
-    }
-    .event_details_container h1{
-        padding: 0;
-    }
-    .event_div_date{
-        font-size: 16px;
-    }
-    .promo_container_title{
-        border-top:1px solid #aea99e;
-        border-bottom:1px solid #aea99e;
-        /*height: 35px;*/
-        line-height: 35px;
-    }
+    
 </style>
 
 <script>
