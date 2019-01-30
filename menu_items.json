@@ -75,7 +75,7 @@
         "sub_menu": [
             {
                 "name": "Management Office",
-                "href": "/contact-us"
+                "href": "/contact_us"
             },
             {
                 "name": "Leasing",
