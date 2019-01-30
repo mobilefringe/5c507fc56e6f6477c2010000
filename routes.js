@@ -118,7 +118,7 @@ define([], function() {
             component: view('default'),
             children: [{
                 path: '',
-                component: view('contact_us'),
+                component: view('leasing'),
                 name: 'contactUs'
             }]
         },
