@@ -1,0 +1,44 @@
+[
+    {
+        "name": "Directory",
+        "id": "stores_link",
+        "href": "/stores"
+    },
+    {
+        "name": "Promotions",
+        "id": "events_link",
+        "href": "/promotions",
+        "show_sub_menu": false
+    },
+        {
+        "name": "News",
+        "id": "events_link",
+        "href": "/events",
+        "show_sub_menu": false
+    },
+    {
+        "name": "Mall Information",
+        "id": "mallInfo_link",
+        "href": "",
+        "show_sub_menu": false,
+        "sub_menu": [
+            {
+                "name": "Guest Services ",
+                "href": "/pages/langhamsquare-guest-services"
+            },
+            {
+                "name": "Mall Hours ",
+                "href": "/hours"
+            },
+            {
+                "name": "Our History",
+                "href": "/pages/rollinghills-our-history"
+            }
+        ]
+    },
+    {
+        "name": "Contact Us",
+        "id": "contact_link",
+        "href": "/contact_us"
+    }
+]
