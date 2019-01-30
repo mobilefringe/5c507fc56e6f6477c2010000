@@ -33,7 +33,7 @@
 <script>
     define(["Vue", "vuex", "vue!mapplic-svg", "vue-select"], function(Vue, Vuex, MapplicComponent, VueSelect) {
         Vue.component('v-select', VueSelect.VueSelect);
-        return Vue.component("stores-component", {
+        return Vue.component("businessList-component", {
             template: template, // the variable template will be injected
             props:['inside_banner'],
             data: function() {
