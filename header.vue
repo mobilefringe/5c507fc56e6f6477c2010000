@@ -25,7 +25,7 @@
     					<!--<a href="http://www.twitter.com/" target="_blank" class="social_link_icon social_twitter" :alt="property.name + ' Twitter'"><i class="fa fa-twitter"></i><p style="display:none;">Twitter icon</p></a>-->
     					<!--<a href="http://www.facebook.com/" target="_blank" class="social_link_icon social_fb" :alt="property.name +' Facebook'"><i class="fa fa-facebook"></i><p style="display:none;">Facebook icon</p></a>-->
     					<div id="desktopHeader">
-                            <div id="g_translater" class="text-center">
+                            <div id="g_translater" class="text-right">
                                 <div id="google_translate_element"></div>
                             </div>
                         </div>
@@ -140,7 +140,7 @@
 </template>
 
 <script>
-    define(["Vue", "vuex", 'json!menu_items.json', "bootstrap-vue", "google-translate"], function (Vue, Vuex, MenuItems, BootstrapVue, googleTranslare) {
+    define(["Vue", "vuex", 'json!menu_items.json', "bootstrap-vue", "google-translate"], function (Vue, Vuex, MenuItems, BootstrapVue, googleTranslate) {
         Vue.use(BootstrapVue);
         return Vue.component("header-component", {
             template: template, // the variable template will be injected,
