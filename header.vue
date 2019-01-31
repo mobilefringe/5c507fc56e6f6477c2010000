@@ -140,7 +140,7 @@
 </template>
 
 <script>
-    define(["Vue", "vuex", 'json!menu_items.json', "bootstrap-vue"], function (Vue, Vuex, MenuItems, BootstrapVue) {
+    define(["Vue", "vuex", 'json!menu_items.json', "bootstrap-vue", "google-translate"], function (Vue, Vuex, MenuItems, BootstrapVue) {
         Vue.use(BootstrapVue);
         return Vue.component("header-component", {
             template: template, // the variable template will be injected,
