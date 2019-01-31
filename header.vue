@@ -247,7 +247,7 @@
                     }, 100);
                 },
                 googleTranslateElement: function(id) {
-                    new google.translate.TranslateElement({pageLanguage: 'en', includedLanguages: 'en,zh-CN,zh-CTW', layout: google.translate.TranslateElement.InlineLayout.SIMPLE, gaTrack: true, gaId: 'UA-115200481-13'}, id);
+                    new google.translate.TranslateElement({pageLanguage: 'en', includedLanguages: 'en,zh-CN,zh-TW', layout: google.translate.TranslateElement.InlineLayout.SIMPLE, gaTrack: true, gaId: 'UA-115200481-13'}, id);
                     var vm = this;
                     setTimeout(function(){
                         if (vm.windowWidth < 768){
