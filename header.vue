@@ -19,11 +19,11 @@
     			</div>
     			<div class="col-sm-6 hidden_phone">
     				<div class="social-div social_icons">
-    					<!--<router-link to="/contact_us" style="font-size:12px; margin-right:10px; color:#666666;display: inline-block;height: 30px;line-height: 30px;">CONTACT US</router-link>-->
-    					<!--<a href="https://www.pinterest.com/hrctoronto" target="_blank" class="social_link_icon social_twitter" :alt="property.name + ' Pinterest'"><i class="fa fa-pinterest"></i><p style="display:none;">Pinterest icon</p></a>-->
-    					<!--<a href="https://www.instagram.com/" target="_blank" class="social_link_icon social_twitter" :alt="property.name + ' Instagram'"><i class="fa fa-instagram"></i><p style="display:none;">Instagram icon</p></a>-->
-    					<!--<a href="http://www.twitter.com/" target="_blank" class="social_link_icon social_twitter" :alt="property.name + ' Twitter'"><i class="fa fa-twitter"></i><p style="display:none;">Twitter icon</p></a>-->
-    					<!--<a href="http://www.facebook.com/" target="_blank" class="social_link_icon social_fb" :alt="property.name +' Facebook'"><i class="fa fa-facebook"></i><p style="display:none;">Facebook icon</p></a>-->
+    					<router-link to="/contact_us" style="font-size:12px; margin-right:10px; color:#666666;display: inline-block;height: 30px;line-height: 30px;">CONTACT US</router-link>
+    					<a href="https://www.pinterest.com/hrctoronto" target="_blank" class="social_link_icon social_twitter" :alt="property.name + ' Pinterest'"><i class="fa fa-pinterest"></i><p style="display:none;">Pinterest icon</p></a>
+    					<a href="https://www.instagram.com/" target="_blank" class="social_link_icon social_twitter" :alt="property.name + ' Instagram'"><i class="fa fa-instagram"></i><p style="display:none;">Instagram icon</p></a>
+    					<a href="http://www.twitter.com/" target="_blank" class="social_link_icon social_twitter" :alt="property.name + ' Twitter'"><i class="fa fa-twitter"></i><p style="display:none;">Twitter icon</p></a>
+    					<a href="http://www.facebook.com/" target="_blank" class="social_link_icon social_fb" :alt="property.name +' Facebook'"><i class="fa fa-facebook"></i><p style="display:none;">Facebook icon</p></a>
     					<div id="desktopHeader">
                             <div id="g_translater" class="text-right">
                                 <div id="google_translate_element"></div>
