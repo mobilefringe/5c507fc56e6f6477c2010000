@@ -238,6 +238,25 @@
                 }
             },
             methods : {
+                googleTranslateInit: function() {
+                    let checkIfGoogleLoaded = setInterval(() => {
+                        if (google.translate.TranslateElement != null) {
+                            clearInterval(checkIfGoogleLoaded);
+                            this.googleTranslateElement('google_translate_element');
+                        }
+                    }, 100);
+                },
+                googleTranslateElement: function(id) {
+                    new google.translate.TranslateElement({pageLanguage: 'en', includedLanguages: 'en,es', layout: google.translate.TranslateElement.InlineLayout.SIMPLE, gaTrack: true, gaId: 'UA-115200481-13'}, id);
+                    var vm = this;
+                    setTimeout(function(){
+                        if (vm.windowWidth < 768){
+                            vm.m = true;
+                            $('#g_translater').detach().appendTo('#google_translate_element_m');                            
+                        }
+                    }, 1500);
+                    
+                },
                 loadData: async function() {
                     try{
                         
