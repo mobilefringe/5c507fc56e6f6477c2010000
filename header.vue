@@ -189,6 +189,9 @@
             },
             mounted () {
                 this.toggleActiveCass(); 
+                this.$nextTick(() => {
+                    this.googleTranslateInit();
+                });
             },
             computed: {
                 ...Vuex.mapGetters([
