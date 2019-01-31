@@ -157,7 +157,8 @@
                     smallerHeader: false,
                     isSticky: 100,
                     headerReady: false,
-                    submenuOpen: false
+                    submenuOpen: false,
+                    m : false
                 }
             },
             created(){
