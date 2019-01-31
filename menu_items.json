@@ -16,10 +16,6 @@
             {
                 "name": "Restaurants",
                 "href": "/restaurants"
-            },
-            {
-                "name": "Centre Map",
-                "href": "/map"
             }
         ]
     },
