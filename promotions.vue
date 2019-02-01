@@ -62,59 +62,7 @@
 </template>
 
 <style>
-    .date_bar{
-        /* Today: */
-        background: #D3D3D3;
-        height: 40px;
-        line-height: 40px;
-        margin: auto;
-        text-align: center;
-    }
-    .date_bar .fa{
-        cursor: pointer;
-    }
-    .current_date{
-        color: #4a4a4a;
-        padding: 0 10px;
-    }
-    .all_dates {
-        border-bottom: 1px solid #aea99e;
-    }
-    .all_dates_child{
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-    }
-    .all_dates span {
-        font-size: 16px;
-        color: #000000;
-        letter-spacing: 1.5px;
-        height: 40px;
-        line-height: 40px;
-        padding: 5px;
-        cursor: pointer;
-    }
-     .all_dates [class*="date_"]:focus, [class*="date_"]:hover { 
-        background-color: #D3D3D3;
-    }
-    .all_dates span.active { 
-        background-color: #bababa;
-    }
-    .promo_dets {
-        border-bottom: 1px solid #aea99e;
-    }
-    .promo_dets:last-child {
-        border-bottom: none;
-    }
-    .row.is-table-row {
-        margin: 0;
-    }
-    .row.is-table-row [class*="col-"] {
-        padding:0;
-    }
-    .feature_read_more {
-        width : auto;
-    }
+    
     @media (max-width: 768px) { 
         .promo_container .promo_feature_share {
             display: block;
