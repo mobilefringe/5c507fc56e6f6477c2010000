@@ -149,8 +149,8 @@ require(['Vue', 'vuex', 'vue2-filters', 'vue_router', 'routes', 'datastore', 'vu
                 return share_url;
             },
             toggleSiteMap(){
-                this.toogle_sitemap = !this.toogle_sitemap;
-                if(this.toogle_sitemap) {
+                this.toggle_sitemap = !this.toggle_sitemap;
+                if(this.toggle_sitemap) {
                     // footer_sitemap
                     var element = $("#footer_sitemap");
                     console.log("element", element)
