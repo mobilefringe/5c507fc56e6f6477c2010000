@@ -149,7 +149,6 @@
                     smallerHeader: false,
                     isSticky: 100,
                     headerReady: false,
-                    submenuOpen: false,
                     m : false
                 }
             },
