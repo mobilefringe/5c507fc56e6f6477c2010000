@@ -155,7 +155,7 @@ require(['Vue', 'vuex', 'vue2-filters', 'vue_router', 'routes', 'datastore', 'vu
                     var element = $("#footer_sitemap");
                     console.log("element", $('body')[0].offsetHeight)
                     var position = $('body')[0].offsetHeight+100;//$("#footer_sitemap").offset().top;
-                    console.log("element.offset()", $("#footer_sitemap").offset())
+                    console.log("position", position)
                     window.scrollTo({
                         top: position,
                         behavior: 'smooth'
