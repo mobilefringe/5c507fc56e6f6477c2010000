@@ -304,8 +304,15 @@
                   }
                 },
             },
+            beforeMount () {
+    			window.addEventListener('resize', this.getWindowWidth);
+    		},
+    		beforeDestroy () {
+    			
+    		}
             destroyed: function() {
                 window.removeEventListener("scroll", this.makeNavbarSmall);
+                window.addEventListener('resize', this.getWindowWidth);
             }
         });
     });
