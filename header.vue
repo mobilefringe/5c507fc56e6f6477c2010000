@@ -19,11 +19,6 @@
     			</div>
     			<div class="col-sm-6 hidden_phone">
     				<div class="social-div social_icons">
-    					<!--<router-link to="/contact_us" style="font-size:12px; margin-right:10px; color:#666666;display: inline-block;height: 30px;line-height: 30px;">CONTACT US</router-link>-->
-    					<!--<a href="https://www.pinterest.com/hrctoronto" target="_blank" class="social_link_icon social_twitter" :alt="property.name + ' Pinterest'"><i class="fa fa-pinterest"></i><p style="display:none;">Pinterest icon</p></a>-->
-    					<!--<a href="https://www.instagram.com/" target="_blank" class="social_link_icon social_twitter" :alt="property.name + ' Instagram'"><i class="fa fa-instagram"></i><p style="display:none;">Instagram icon</p></a>-->
-    					<!--<a href="http://www.twitter.com/" target="_blank" class="social_link_icon social_twitter" :alt="property.name + ' Twitter'"><i class="fa fa-twitter"></i><p style="display:none;">Twitter icon</p></a>-->
-    					<!--<a href="http://www.facebook.com/" target="_blank" class="social_link_icon social_fb" :alt="property.name +' Facebook'"><i class="fa fa-facebook"></i><p style="display:none;">Facebook icon</p></a>-->
     					<div id="desktopHeader">
                             <div id="g_translater" class="text-right">
                                 <div id="google_translate_element"></div>
@@ -31,13 +26,6 @@
                         </div>
     				</div>
     				<div class="newsletter-div">
-    					<!--<div class="newsletter_box" style="margin-bottom:5px">-->
-    					<!--	<div class="input_box">-->
-    					<!--	    <label for="fieldEmail" style="display:none;">Enter Email Address</label>-->
-    					<!--		<input class="sub_input_text" id="fieldEmail" name="cm-irudui-irudui" type="email" v-model="newsletter_email" required placeholder="ENTER YOUR EMAIL TO SUBSCRIBE" @keyup.enter="$router.push({path: '/newsletter?email='+ newsletter_email})"/>-->
-    					<!--		<router-link style="background-color:transparent;" :to="'/newsletter?email='+ newsletter_email" ><img src="//codecloud.cdn.speedyrails.net/sites/5b16b9686e6f6426c91e0000/image/png/1511797731769/newsletter.png" alt="Newsletter signup icon"></router-link>-->
-    					<!--	</div>-->
-    					<!--</div>-->
     					<div id="search-form" class="search-form">
     						<div class="input_box">
     							<search-component v-if="headerReady" :list="searchList" placeholder="SEARCH" :suggestion-attribute="suggestionAttribute" :keys="keys" v-model="search_result" @select="onOptionSelect" :autocomplete="false" :minMatchCharLength="3" :tokenize="true">
