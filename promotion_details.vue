@@ -32,7 +32,7 @@
 				</div>
 			</div>
 			<div class="col-sm-8 event_image_container text-left">
-				<img v-if="!_.includes(currentPromo.image_url, 'missing')" :src="currentPromo.image_url" :alt="currentPromo.name" class="hidden_phone"/>
+				<img v-if="!_.includes(currentPromo.image_url, 'missing')" :src="currentPromo.image_url" :alt="currentPromo.name" class=""/>
 				<div class="event_desc_container">
 				    <div class="text-left promo_description">
     				    <p v-html="currentPromo.rich_description"></p>
