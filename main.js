@@ -153,15 +153,15 @@ require(['Vue', 'vuex', 'vue2-filters', 'vue_router', 'routes', 'datastore', 'vu
                 if(this.toogle_sitemap) {
                     // footer_sitemap
                     var element = this.$refs[refName]
-      if (this.isMobile) {
-        var position = $(element).offset().top - 160
-      } else {
-        var position = $(element).offset().top - 200 //element.offsetTop;
-      }
-      window.scrollTo({
-        top: position,
-        behavior: 'smooth'
-      })
+                    if (this.isMobile) {
+                        var position = $(element).offset().top - 160
+                    } else {
+                        var position = $(element).offset().top - 200 //element.offsetTop;
+                    }
+                    window.scrollTo({
+                        top: position,
+                        behavior: 'smooth'
+                    })
                 }
             }
         },
