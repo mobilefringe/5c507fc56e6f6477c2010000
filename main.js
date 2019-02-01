@@ -152,7 +152,7 @@ require(['Vue', 'vuex', 'vue2-filters', 'vue_router', 'routes', 'datastore', 'vu
                 this.toogle_sitemap = !this.toogle_sitemap;
                 if(this.toogle_sitemap) {
                     // footer_sitemap
-                    var element = $("#footer_sitemap")
+                    var element = $("#footer_sitemap");
                     var position = $(element).offset().top;
                     window.scrollTo({
                         top: position,
