@@ -48,8 +48,8 @@
     							<p class="footer_sitemap"> 
     							    <span @click="toggleSiteMap()">Site Map</span> |
     							    <router-link to="/jobs">Jobs</router-link> | 
-    							    <router-link :to="'/pages/'+$root.site+'-privacy-policy'">Privacy Policy</router-link> | 
     							    <router-link to="/contact_us">Contact Us</router-link> | <br class="show_phone"> 
+    							    <router-link :to="'/pages/'+$root.site+'-privacy-policy'">Privacy Policy</router-link> | 
     							    <a href="https://www.mallmaverick.com" target="_blank">Powered by Mall Maverick</a>  
 							    </p>
     							<p class="" v-if="property"> {{property.address1}}, {{property.city}}, {{property.postal_code}} {{property.province_state}} <span v-if="property.contact_phone">-  {{property.contact_phone}}</span></p>
