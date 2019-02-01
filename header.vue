@@ -103,9 +103,6 @@
     							<a href="https://www.instagram.com/" target="_blank">
     							    <i class="fa fa-instagram"></i><p style="display:none;">Instagram icon</p>
     							</a>
-    							<!--<a href="https://www.pinterest.com/hrctoronto/" target="_blank">-->
-    							<!--    <i class="fa fa-pinterest"></i><p style="display:none;">Pinterest icon</p>-->
-    							<!--</a>-->
     						</div>
     					</div>
     				</div>
