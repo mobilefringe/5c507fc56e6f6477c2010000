@@ -147,6 +147,12 @@ require(['Vue', 'vuex', 'vue2-filters', 'vue_router', 'routes', 'datastore', 'vu
                 console.log("page, slug", page, slug)
                 var share_url= "http://www.langhamsquare.ca/" + page + "/" + slug;
                 return share_url;
+            },
+            toggleSiteMap(){
+                this.toogle_sitemap = !this.toogle_sitemap;
+                if(this.toogle_sitemap) {
+                    footer_sitemap
+                }
             }
         },
         router: router,
