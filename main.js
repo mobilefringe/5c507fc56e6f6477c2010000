@@ -152,7 +152,8 @@ require(['Vue', 'vuex', 'vue2-filters', 'vue_router', 'routes', 'datastore', 'vu
                 this.toggle_sitemap = !this.toggle_sitemap;
                 if(this.toggle_sitemap) {
                     // footer_sitemap
-                    var element = $("#footer_sitemap");
+                    setTimeout(function(){
+                        var element = $("#footer_sitemap");
                     console.log("element", $('body')[0].offsetHeight)
                     var position = document.body.scrollHeight;//$("#footer_sitemap").offset().top;
                     console.log("position", position)
@@ -160,6 +161,7 @@ require(['Vue', 'vuex', 'vue2-filters', 'vue_router', 'routes', 'datastore', 'vu
                         top: position,
                         behavior: 'smooth'
                     })
+                    }, 200)
                 }
             }
         },
