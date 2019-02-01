@@ -83,6 +83,7 @@
     .all_dates_child{
         display: flex;
         flex-wrap: wrap;
+        justify-content: center;
     }
     .all_dates span {
         font-size: 16px;
