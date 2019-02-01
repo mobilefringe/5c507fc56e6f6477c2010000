@@ -69,6 +69,21 @@
     						</div>
     					</div>
     				</div>
+    				<transition  name="custom-classes-transition" enter-active-class="animated fadeIn" leave-active-class="animated fadeOut">
+    					<div class="footer-bottom hidden-phone " v-if="toggle_sitemap">
+    						<div class="footer-bottom-title-div ">
+    							<div class="page_container">
+    								<div v-for="item in menu_items" :id="item.parent_id" class="footer_menu_title col-sm-2">
+    									<router-link :to="item.href" :id="item.id" exact>{{item.name}} </router-link>
+    									<div v-for="sub_menu in item.sub_menu">
+    										<router-link :to="sub_menu.href" :id="sub_menu.id" exact>{{sub_menu.name}} </router-link>
+    									</div>
+    								</div>
+    								&nbsp;
+    							</div>
+    						</div>
+    					</div>
+    				</transition>
     			</div>
     		</div>
 		</div>
