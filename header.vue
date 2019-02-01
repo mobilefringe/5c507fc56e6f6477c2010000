@@ -2,6 +2,9 @@
     <div class="top_menu_container" :class="{'smallerHeader' : smallerHeader}">
         <div class="header-container hidden-phone " id="top" >
             <h1 v-if="property" style="display:none;">property.name</h1>
+            <div class="google_translate_container visible_phone">
+                <div id="google_translate_element_m"></div>
+            </div>
     		<div class="header page_container">
     			<div class="col-sm-6 text_left no_padding">
     				<router-link to="/" exact>
