@@ -44,7 +44,7 @@
     			<div class="footer-div hidden-phone" id="footer-div">
     				<div class="footer-top page_container" style="overflow:visible;">
     					<div class="row" style="margin:auto">
-    						<div class="col-sm-5 text-left">
+    						<div class="col-sm-6 text-left">
     							<p class="footer_sitemap"> 
     							    <span @click="toggleSiteMap()">Site Map</span> |
     							    <router-link to="/contact_us">Management Office</router-link> | <br class="show_phone"> 
@@ -55,9 +55,9 @@
 							    </p>
     							<p class="" v-if="property"> {{property.address1}}, {{property.city}}, {{property.postal_code}} {{property.province_state}} <span v-if="property.contact_phone">-  {{property.contact_phone}}</span></p>
     						</div>
-    						<div class="col-sm-2 text-center">
+    						<!--<div class="col-sm-2 text-center">-->
     						</div>
-    						<div class="col-sm-5 text-right">
+    						<div class="col-sm-6 text-right">
     						    <div class="social_icons">
                 					<a href="https://www.facebook.com/langhamsquare/" target="_blank" class="social_link_icon social_fb" :alt="property.name +' Facebook'"><i class="fa fa-facebook"></i><p style="display:none;">Facebook icon</p></a>
                 					<a href="https://www.instagram.com/" target="_blank" class="social_link_icon social_twitter" :alt="property.name + ' Instagram'"><i class="fa fa-instagram"></i><p style="display:none;">Instagram icon</p></a>
