@@ -61,21 +61,6 @@
 	</div>
 </template>
 
-<style>
-    
-    @media (max-width: 768px) { 
-        .promo_container .promo_feature_share {
-            display: block;
-        }
-        .promo_container .row.is-table-row [class*="col-"] {
-            float: left;
-            display: block;
-        }
-        .promo_container .row.is-table-row .col-sm-4.col-xs-12{
-            text-align: left!important;
-        }
-    }
-</style>
 
 <script>
     define(["Vue", "vuex", "moment", "moment-timezone", "vue-moment", "vue-meta", "vue-lazy-load"], function(Vue, Vuex, moment, tz, VueMoment, Meta, VueLazyload) {
