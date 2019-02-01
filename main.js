@@ -153,8 +153,8 @@ require(['Vue', 'vuex', 'vue2-filters', 'vue_router', 'routes', 'datastore', 'vu
                 if(this.toggle_sitemap) {
                     // footer_sitemap
                     var element = $("#footer_sitemap");
-                    console.log("element", element)
-                    var position = element.offset().top;
+                    console.log("element", $(document).height())
+                    var position = $("#footer_sitemap").offset().top;
                     console.log("element.offset()", $("#footer_sitemap").offset())
                     window.scrollTo({
                         top: position,
