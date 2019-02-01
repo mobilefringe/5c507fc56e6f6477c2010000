@@ -26,6 +26,13 @@
                         </div>
     				</div>
     				<div class="newsletter-div">
+    					<!--<div class="newsletter_box" style="margin-bottom:5px">-->
+    					<!--	<div class="input_box">-->
+    					<!--	    <label for="fieldEmail" style="display:none;">Enter Email Address</label>-->
+    					<!--		<input class="sub_input_text" id="fieldEmail" name="cm-irudui-irudui" type="email" v-model="newsletter_email" required placeholder="ENTER YOUR EMAIL TO SUBSCRIBE" @keyup.enter="$router.push({path: '/newsletter?email='+ newsletter_email})"/>-->
+    					<!--		<router-link style="background-color:transparent;" :to="'/newsletter?email='+ newsletter_email" ><img src="//codecloud.cdn.speedyrails.net/sites/5b16b9686e6f6426c91e0000/image/png/1511797731769/newsletter.png" alt="Newsletter signup icon"></router-link>-->
+    					<!--	</div>-->
+    					<!--</div>-->
     					<div id="search-form" class="search-form">
     						<div class="input_box">
     							<search-component v-if="headerReady" :list="searchList" placeholder="SEARCH" :suggestion-attribute="suggestionAttribute" :keys="keys" v-model="search_result" @select="onOptionSelect" :autocomplete="false" :minMatchCharLength="3" :tokenize="true">
