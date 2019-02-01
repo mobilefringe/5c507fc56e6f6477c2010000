@@ -153,14 +153,11 @@ require(['Vue', 'vuex', 'vue2-filters', 'vue_router', 'routes', 'datastore', 'vu
                 if(this.toggle_sitemap) {
                     // footer_sitemap
                     setTimeout(function(){
-                        var element = $("#footer_sitemap");
-                    console.log("element", $('body')[0].offsetHeight)
-                    var position = document.body.scrollHeight;//$("#footer_sitemap").offset().top;
-                    console.log("position", position)
-                    window.scrollTo({
-                        top: position,
-                        behavior: 'smooth'
-                    })
+                        var position = document.body.scrollHeight;
+                        window.scrollTo({
+                            top: position,
+                            behavior: 'smooth'
+                        })
                     }, 200)
                 }
             }
