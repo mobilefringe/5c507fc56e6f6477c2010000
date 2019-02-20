@@ -63,7 +63,7 @@
 </template>
 
 <script>
-    define(["Vue", "vuex", "moment", "moment-timezone", "vue-moment", 'vee-validate', 'utility'], function(Vue, Vuex, moment, tz, VueMoment, VeeValidate, Untility) {
+    define(["Vue", "vuex", "moment", "moment-timezone", "vue-moment", 'vee-validate', 'utility'], function(Vue, Vuex, moment, tz, VueMoment, VeeValidate, Utility) {
         return Vue.component("leasing-component", {
             template: template, // the variable template will be injected,
             data: function() {
