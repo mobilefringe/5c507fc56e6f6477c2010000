@@ -81,6 +81,12 @@
             },
             created(){
               this.updateCurrentPage();
+              //ensuring the variables are created in this order for email
+                this.form_data.name = null;
+                this.form_data.email = null;
+                this.form_data.phone = null;
+                this.form_data.subject = null;
+                this.form_data.message = null;
             },
             computed: {
                 ...Vuex.mapGetters([
