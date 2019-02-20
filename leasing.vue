@@ -69,7 +69,10 @@
             data: function() {
                 return {
                     success_subscribe: false,
-                    currentPage: null
+                    currentPage: null,
+                    form_data : {},
+                    formSuccess : false,
+                    formError: false,
                 }
             },
             beforeRouteUpdate(to, from, next) {
