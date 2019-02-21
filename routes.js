@@ -87,6 +87,22 @@ define([], function() {
             ]
         },
         {
+            path: '/noticeboard',
+            component: view('default'),
+            children: [{
+                    path: '',
+                    component: view('noticeboard'),
+                    name: 'eventList'
+                },
+                {
+                    path: ':id',
+                    component: view('noticeboard_details'),
+                    name: 'eventDetails',
+                    props: true
+                }
+            ]
+        },
+        {
             path: '/hours',
             component: view('default'),
             children: [{
