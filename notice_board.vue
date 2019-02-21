@@ -84,7 +84,8 @@
                 ...Vuex.mapGetters([
                     'property',
                     'timezone',
-                    'processedEvents'
+                    'findBlogByName',
+                    'findBlogBySlug'
                 ]),
                 events() {
                     var vm = this;
