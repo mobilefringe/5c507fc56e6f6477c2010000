@@ -15,7 +15,7 @@
     					<div class="promo_feature_share">
         					<span class="feature_read_more">
         						<router-link :to="'/events/'+promo.slug" class="mobile_readmore" >
-        							<p class="feature-readmore hvr-sweep-to-right" :aria="promo.name">View Event Details<i class="fa fa-chevron-right pull-right" aria-hidden="true"></i></p>
+        							<p class="feature-readmore hvr-sweep-to-right" :aria="promo.name">View Notice Details<i class="fa fa-chevron-right pull-right" aria-hidden="true"></i></p>
         						</router-link>
         					</span>
         					<div class="text-right share_container" v-if="promo">
