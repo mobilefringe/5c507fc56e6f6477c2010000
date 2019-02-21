@@ -96,41 +96,12 @@
                   console.error("Could not retrieve data from server. Please check internet connection and try again.");
                 });
             },
-            watch: {
-                currentEvent: function() {
-                    var vm = this;
-                    var temp_promo = [];
-                    var current_id =_.toNumber(this.currentEvent.id);
-                    _.forEach(this.allEvents, function(value, key) {
-                        if(_.toNumber(value.id) != current_id){
-                            var current_promo = vm.findEventById(value.id);
-                            current_promo.description_short = _.truncate(current_promo.description, {'length': 70});
-                            temp_promo.push(current_promo);
-                        }
-                    });
-                    this.storePromos = temp_promo;
-                },
-            },
             computed: {
                 ...Vuex.mapGetters([
                     'property',
                     'timezone',
                     'findBlogPostBySlug'
-                ]),
-                allEvents() {
-                    var events = this.processedEvents;
-                    var vm = this;
-                    events.map(event => {
-                        if(event.store != null && event.store != undefined && _.includes(event.store.image_url, 'missing')){
-                            event.store.image_url = vm.property.default_logo_url;
-                        }
-                        else if (event.store == null && event.store == undefined) {
-                            event.store = {};
-                            event.store.image_url = vm.property.default_logo_url;
-                        }
-                    });
-                    return events;
-                },
+                ])
             },
             methods: {
                 updateCurrentEvent (id) {
