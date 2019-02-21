@@ -1,6 +1,6 @@
 <template>
 	<div class="promo_dets_container" v-if="currentPromo">
-		<div class="row">
+		<div class="row page_container">
 			<div class="col-sm-4 event_logo_container">
 				<div>
 					<!--<img :src="currentPromo.store.store_front_url_abs" :alt="currentPromo.store.name" class="hidden_phone"/>-->
@@ -53,7 +53,7 @@
                 </social-sharing>
 			</div>
 		</div>
-		<div class="promo_promo_container" v-if="storePromos && storePromos.length > 0">
+		<div class="promo_promo_container page_container" v-if="storePromos && storePromos.length > 0">
 		    <div class="promo_container_title text-left all_caps"> OTHER {{currentPromo.store.name | uppercase }} Promotions</div>
 		    <div class="row promo_promo_dets text-left" v-for="promo in storePromos">
 		        <div class="col-sm-7" >
