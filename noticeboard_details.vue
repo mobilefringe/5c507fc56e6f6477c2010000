@@ -1,5 +1,5 @@
 <template>
-	<div class="event_dets_container noticeboard_dets_container " v-if="currentEvent">
+	<div class="event_dets_container noticeboard_dets_container" v-if="currentEvent">
 		<div class="row page_container">
 			<div class="col-sm-12 event_image_container text-left">
 				<!--<img v-if="_.includes(currentEvent.image_url, 'missing') != true" :src="currentEvent.image_url" :alt="currentEvent.name"/>-->
