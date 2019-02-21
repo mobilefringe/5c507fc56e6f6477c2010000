@@ -126,34 +126,45 @@
                         this.$router.replace({ path: '/'});
                     });
                 },
-                validateBeforeSubmit() {
-                    this.$validator.validateAll().then((result) => {
-                    if (result) {
-                        let errors = this.errors;
-                        send_data = {};
-                        send_data.form_data = JSON.stringify(Utility.serializeObject(this.form_data));
-                        this.$store.dispatch("CONTACT_US", send_data).then(res => {
-                            this.formSuccess = true;
-                        }).catch(error => {
-                            try {
-                                if (error.response.status == 401) {
-                                    console.log("Data load error: " + error.message);
-                                    this.formError = true;
-                                } 
-                                else {
-                                    console.log("Data load error: " + error.message);
-                                    this.formError = true;
+                validateBeforeSubmitPerm() {
+                    this.$validator.validate().then((result) => {
+                        console.log(result)
+                        if (result) {
+                            let errors = this.errors;
+                            //format email
+                            send_data = {};
+                            send_data.url = "https://www.mallmaverick.com/send_contact_email";
+                            var perm_formdata = {}; //JSON.stringify(this.serializeObject(this.form_data));
+                            perm_formdata.send_to = "eastwoodr@davpart.com";
+                            perm_formdata.subject = "Gerrard Square Permanent Leasing Form"; 
+                            perm_formdata.body = {};
+                            perm_formdata.body["Legal Name of Organization"] =  this.form_data.legalName;
+                             
+                            perm_formdata.body["Contact First Name"] =   this.form_data.firstName, 
+                            perm_formdata.body["Contact Last Name"] = this.form_data.lastName,
+                            perm_formdata.body["Contact Phone Number"] = this.form_data.phone, 
+                            perm_formdata.body["Contact Email Address" ] =  this.form_data.email, 
+                            perm_formdata.body["Square Footage Required"] =  this.form_data.size, 
+                            perm_formdata.body["Comments"] =  this.form_data.comments,
+                            
+                            send_data.form_data = Utility.serializeObject(perm_formdata);
+                            console.log("Data ", send_data.form_data)
+                            var vm = this;
+                            $.ajax({
+                                url : send_data.url,
+                                type: "POST",
+                                data : perm_formdata,
+                                success: function(data, textStatus, jqXHR){
+                                    vm.formSuccessPerm = true;
+                                },
+                                error: function (jqXHR, textStatus, errorThrown){
+                                  console.log("Data load error: " + error.message);
+                                  vm.formErrorPerm = true;
                                 }
-                            } 
-                            catch (e) {
-                                console.log("Data load error: " + error.message);
-                                this.formError = true;
-                            }
-                        })
+                            });
                         }
-                    
                     })
-                },
+                }
             }
         });
     });
