@@ -147,6 +147,11 @@ require(['Vue', 'vuex', 'vue2-filters', 'vue_router', 'routes', 'datastore', 'vu
                 var share_url= "http://www.langhamsquare.ca/" + page + "/" + slug;
                 return share_url;
             },
+            truncate(text, length){
+              return  _.truncate(value.description, {
+                                'length': 150
+                            });
+            },
             toggleSiteMap(){
                 this.toggle_sitemap = !this.toggle_sitemap;
                 if(this.toggle_sitemap) {
