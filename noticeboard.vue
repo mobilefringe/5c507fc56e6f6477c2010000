@@ -14,7 +14,7 @@
     					<p class="promo_div_description">{{$root.truncate(promo.body,150)}}</p>
     					<div class="promo_feature_share">
         					<span class="feature_read_more">
-        						<router-link :to="'/events/'+promo.slug" class="mobile_readmore" >
+        						<router-link :to="'/noticeboard/'+promo.slug" class="mobile_readmore" >
         							<p class="feature-readmore hvr-sweep-to-right" :aria="promo.name">View Notice Details<i class="fa fa-chevron-right pull-right" aria-hidden="true"></i></p>
         						</router-link>
         					</span>
