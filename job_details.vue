@@ -1,5 +1,5 @@
 <template>
-	<div class="job_dets_container page_container" v-if="currentJob">
+	<div class="job_dets_container" v-if="currentJob">
 		<div class="row">
 			<div class="col-sm-4 job_logo_container">
 				<div>
