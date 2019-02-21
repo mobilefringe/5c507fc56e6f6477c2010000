@@ -115,9 +115,7 @@
                 ...Vuex.mapGetters([
                     'property',
                     'timezone',
-                    'processedEvents',
-                    'findEventBySlug',
-                    'findEventById'
+                    'findBlogPostBySlug'
                 ]),
                 allEvents() {
                     var events = this.processedEvents;
