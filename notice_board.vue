@@ -88,26 +88,24 @@
                 ]),
                 events() {
                     var vm = this;
+                    var temp_promo = [];
                     var blogs = this.findBlogBySlug('langhamsquare-noticeboard');
                     if(blogs && blogs.posts){
-                        
-                    
-                    var temp_promo = [];
-                    _.forEach(this.processedEvents, function(value, key) {
-                        value.description_short = _.truncate(value.description, {
-                            'length': 70
+                        _.forEach(this.processedEvents, function(value, key) {
+                            value.description_short = _.truncate(value.description, {
+                                'length': 70
+                            });
+                            // if (value.store != null && value.store != undefined && _.includes(value.store.image_url, 'missing')) {
+                            //     value.store.image_url = vm.property.default_logo_url;
+                            // }
+                            if (_.includes(value.image_url, 'missing')) {
+                                value.image_url = "//codecloud.cdn.speedyrails.net/sites/5c507fc56e6f6477c2010000/image/jpeg/1548062300000/Mall_StoreLogo_600x600px_Template.jpg";
+                            }
+                                
+                            temp_promo.push(value);
                         });
-                        // if (value.store != null && value.store != undefined && _.includes(value.store.image_url, 'missing')) {
-                        //     value.store.image_url = vm.property.default_logo_url;
-                        // }
-                        if (_.includes(value.image_url, 'missing')) {
-                            value.image_url = "//codecloud.cdn.speedyrails.net/sites/5c507fc56e6f6477c2010000/image/jpeg/1548062300000/Mall_StoreLogo_600x600px_Template.jpg";
-                        }
-                            
-                        temp_promo.push(value);
-                    });
-                    
-                    _.sortBy(temp_promo, [function(o) { return o.start_date; }]);
+                        
+                        _.sortBy(temp_promo, [function(o) { return o.start_date; }]);
                     }
                     return temp_promo;
                 }
