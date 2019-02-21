@@ -39,7 +39,7 @@
                 </social-sharing>
 			</div>
 		</div>
-		<div class="event_promo_container page_container" v-if="storePromos">
+		<div class="event_promo_container page_container" v-if="storePromos && storePromos.length > -">
 		    <div class="promo_container_title text-left all_caps"> OTHER {{property.name | uppercase }} EVENTS</div>
 		    <div class="row event_promo_dets text-left is-table-row border_bottom" v-for="promo in storePromos">
 		        <div class="col-sm-7" >
