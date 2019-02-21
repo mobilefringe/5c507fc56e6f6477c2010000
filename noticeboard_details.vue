@@ -18,7 +18,7 @@
     			</div>
 			</div>
 			<div class="col-sm-8 event_image_container text-left">
-				<img v-if="_.includes(currentEvent.image_url, 'missing') != true" :src="currentEvent.image_url" :alt="currentEvent.name"/>
+				<!--<img v-if="_.includes(currentEvent.image_url, 'missing') != true" :src="currentEvent.image_url" :alt="currentEvent.name"/>-->
 				<div class="event_desc_container">
     				<div class="text-left event_description">
     					<p v-html="currentEvent.rich_description"></p>
