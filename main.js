@@ -148,9 +148,7 @@ require(['Vue', 'vuex', 'vue2-filters', 'vue_router', 'routes', 'datastore', 'vu
                 return share_url;
             },
             truncate(text, length){
-              return  _.truncate(text, {
-                                'length': length
-                            });
+              return  _.truncate(text, {'length': length});
             },
             toggleSiteMap(){
                 this.toggle_sitemap = !this.toggle_sitemap;
