@@ -105,7 +105,7 @@
             },
             methods: {
                 updateCurrentEvent (id) {
-                    this.currentEvent = this.findEventBySlug(id);
+                    this.currentEvent = this.findBlogPostBySlug(id);
                     if (this.currentEvent === null || this.currentEvent === undefined){
                         this.$router.replace({ path: '/'});
                     }
