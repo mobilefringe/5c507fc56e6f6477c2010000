@@ -77,12 +77,12 @@
                 ...Vuex.mapGetters([
                     'property',
                     'timezone',
-                    'findBlogPostBySlug'
+                    'findBlogPostBySlug2'
                 ])
             },
             methods: {
                 updateCurrentEvent (id) {
-                    this.currentEvent = this.findBlogPostBySlug(id);
+                    this.currentEvent = this.findBlogPostBySlug2('langhamsquare-noticeboard'. id);
                     if (this.currentEvent === null || this.currentEvent === undefined){
                         this.$router.replace({ path: '/'});
                     }
