@@ -49,12 +49,12 @@
                 </social-sharing>
 			</div>
 		</div>
-		<div class="row page_container">
-			<div class="col-sm-12 job_desc_container">
+		<!--<div class="row page_container">-->
+		<!--	<div class="col-sm-12 job_desc_container">-->
 				
 				
-			</div>
-		</div>
+		<!--	</div>-->
+		<!--</div>-->
 		<div class="job_container page_container" v-if="storeJobs && storeJobs.length > 0">
 		    <div class="job_container_title text-left all_caps"> OTHER {{currentJob.store.name | uppercase }} Jobs</div>
 		    <div class="row job_job_dets text-left" v-for="job in storeJobs">
