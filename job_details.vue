@@ -26,12 +26,14 @@
 				</div>
 				<div style="margin-left:0; margin-top: 25px;">
 					<h1>{{currentJob.name}}</h1>
-				<p class="job_store_name">{{currentJob.store.name}}</p>
-				<p class="job_div_date">{{currentJob.start_date | moment("MMM D", timezone)}} - {{currentJob.end_date | moment("MMM D", timezone)}}</p>
+    				<p class="job_store_name">{{currentJob.store.name}}</p>
+    				<p class="job_div_date">{{currentJob.start_date | moment("MMM D", timezone)}} - {{currentJob.end_date | moment("MMM D", timezone)}}</p>
 				</div>
 			</div>
 			<div class="col-sm-8 job_image_container text-left">
-				
+				<div class="text-left job_description">
+					<p v-html="currentJob.rich_description"></p>
+				</div>
 				<social-sharing :url="$root.shareURL('jobs',currentJob.slug)" :title="currentJob.title" :description="currentJob.body" :quote="_.truncate(currentJob.description, {'length': 99})" twitter-user="" :media="currentJob.image_url" inline-template >
                     <div class="blog-social-share">
                         <div class="social_share">
@@ -49,9 +51,7 @@
 		</div>
 		<div class="row page_container">
 			<div class="col-sm-12 job_desc_container">
-				<div class="text-left job_description">
-					<p v-html="currentJob.rich_description"></p>
-				</div>
+				
 				
 			</div>
 		</div>
