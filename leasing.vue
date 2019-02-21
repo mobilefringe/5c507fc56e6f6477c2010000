@@ -7,55 +7,74 @@
             <div class="row padding_tb_30" >
                 <img src="//codecloud.cdn.speedyrails.net/sites/5c507fc56e6f6477c2010000/image/jpeg/1548064342000/InsidePageImages_940x320px_SpecialtyLeasingPage.jpg" class="" alt="">
                 <div class="page_body description_text text_left padding_tb_30" v-html="currentPage.body"></div>
-                <form class="form-horizontal padding_top_20" action="form-submit" @submit.prevent="validateBeforeSubmit">
-                        <div class="form-group ">
-                            <div class="col-sm-6 col-xs-12" :class="{'has-error': errors.has('name')}">
-                                <label class="label" for="form_name">Name</label>
-                                <input v-model="form_data.name" v-validate="'required|alpha_spaces'" class="form-control" :class="{'input': true}" name="name" type="text" placeholder="Name" data-vv-delay="500" id="form_name">
-                                <span v-show="errors.has('name')" class="form-control-feedback">{{ errors.first('name') }}</span>
-                            </div>
-                            <div class="col-sm-6 col-xs-12" :class="{'has-error': errors.has('email')}">
-                                <label class="label" for="form_email">Email</label>
-                                <input v-model="form_data.email" v-validate="'required|email'" class="form-control" :class="{'input': true}" name="email" type="email" placeholder="Email" data-vv-delay="500" id="form_email">
-                                <span v-show="errors.has('email')" class="form-control-feedback">{{ errors.first('email') }}</span>
-                            </div>
-                        </div>
-                        <div class="form-group">
-                            <div class="col-sm-6 col-xs-12" :class="{'has-error': errors.has('phone')}">
-                                <label class="label" for="form_phone">Phone</label>
-                                <input v-model="form_data.phone" v-validate="'required|alpha_dash'" class="form-control" :class="{'input': true}" name="phone" type="phone" placeholder="Phone" data-vv-delay="500" id="form_phone">
-                                <span v-show="errors.has('phone')" class="form-control-feedback">{{ errors.first('phone') }}</span>
-                            </div>
-                            <div class="col-sm-6 col-xs-12" :class="{'has-error': errors.has('subject')}">
-                                <label class="label" for="form_subject">Subject</label>
-                                <input v-model="form_data.subject" v-validate="'required:true'" class="form-control" :class="{'input': true}" name="subject" type="text" placeholder="Subject" data-vv-delay="500" id="form_subject">
-                                <span v-show="errors.has('subject')" class="form-control-feedback">{{ errors.first('subject') }}</span>
-                            </div>
-                        </div>
-                        <div class="form-group">
-                            <div class="col-xs-12" :class="{'has-error': errors.has('message')}">
-                                <label class="label" for="form_message">Message</label>
-                                <textarea v-model="form_data.message" v-validate="'required:true'" class="form-control" :class="{'input': true}" name="message" type="text" placeholder="Message" data-vv-delay="500" id="form_message"></textarea>
-                                <span v-show="errors.has('message')" class="form-control-feedback">{{ errors.first('message') }}</span>
-                            </div>
-                        </div>
-                        <div class="form-group account-btn text-left m-t-10">
-                            <div class="col-xs-12">
-                                <button class="feature-readmore hvr-sweep-to-right" type="submit" :disabled="formSuccess">Submit</button>
-                            </div>
-                        </div>
-                    </form>
-                    
-                    <div id="send_contact_success" class="alert alert-success text-left" role="alert" v-show="formSuccess">
-                        <span class="glyphicon glyphicon-ok" aria-hidden="true"></span>
-                        <span class="sr-only">Success</span>
-                        Thank you for contacting us. A member from our team will contact you shortly.
-                    </div>
-                    <div id="send_contact_error" class="alert alert-danger text-left" role="alert" v-show="formError">
-                        <span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span>
-                        <span class="sr-only">Error:</span>
-                        There was an error when trying to submit your request. Please try again later.
-                    </div>
+                <form class="form-horizontal padding_top_20" action="form-submit" v-on:submit.prevent="validateBeforeSubmitPerm">
+        						<div class="form-group ">
+        							<div class="col-xs-12 margin_20" :class="{'has-error': errors.has('legalName')}">
+        								<label for="legalName">Legal Name of Organization<span class="req_star"> *</span></label>
+        								<input id="legalName" v-model="form_data.legalName" v-validate="'required:true'" class="form-control" :class="{'input': true}" name="legalName" type="text" data-vv-delay="500" data-vv-as="Legal Name of Organization">
+        								<span v-show="errors.has('legalName')" class="form-control-feedback">{{ errors.first('legalName') }}</span>
+        							</div>
+        						</div>
+        						<div class="form-group">
+        							<div class="col-sm-6 col-xs-12 margin_20" :class="{'has-error': errors.has('firstName')}">
+        							    <label for="firstName">Contact First Name<span class="req_star"> *</span></label>
+        								<input id="firstName" v-model="form_data.firstName" v-validate="'required:true'" class="form-control" :class="{'input': true}" name="firstName" type="text" data-vv-delay="500" data-vv-as="First Name">
+        								<span v-show="errors.has('firstName')" class="form-control-feedback">{{ errors.first('firstName') }}</span>
+        							</div>
+        							<div class="col-sm-6 col-xs-12 margin_20" :class="{'has-error': errors.has('lastName')}">
+        							    <label for="lastName">Contact Last Name<span class="req_star"> *</span></label>
+        								<input id="lastName" v-model="form_data.lastName" v-validate="'required:true'" class="form-control" :class="{'input': true}" name="lastName" type="text" data-vv-delay="500" data-vv-as="Last Name">
+        								<span v-show="errors.has('lastName')" class="form-control-feedback">{{ errors.first('legalName') }}</span>
+        							</div>
+        						</div>
+        						<div class="form-group">
+        						    <div class="col-sm-6 col-xs-12 margin_20" :class="{'has-error': errors.has('phone')}">
+    									<label for="phone">Contact Phone Number<span class="req_star"> *</span></label>
+    									<input id="phone" v-model="form_data.phone" v-validate="'required:true'" class="form-control" :class="{'input': true}" name="phone" type="text" data-vv-delay="500" data-vv-as="Phone Number">
+    									<span v-show="errors.has('phone')" class="form-control-feedback">{{ errors.first('phone') }}</span>
+    								</div>
+        							<div class="col-sm-6 col-xs-12 margin_20" :class="{'has-error': errors.has('email')}">
+        								<label for="email">Contact Email Address<span class="req_star"> *</span></label>
+        								<input id="email" v-model="form_data.email" v-validate="'required|email'" class="form-control" :class="{'input': true}" name="email" type="email" data-vv-delay="500" data-vv-as="Email Address">
+        								<span v-show="errors.has('email')" class="form-control-feedback">{{ errors.first('email') }}</span>
+        							</div>
+        						</div>
+    							<div class="form-group">
+        						    <div class="col-xs-12 margin_20">
+    									<label for="size">Square Footage Required</label>
+    									<select id="size" v-model="form_data.size" class="form-control">
+                                            <option value="">Select square footage</option>
+                                            <option value="Less than 500 sq.ft.">Less than 500 sq.ft.</option>
+                                            <option value="500 - 1000 sq. ft.">500 - 1000 sq. ft.</option>
+                                            <option value="1000 - 2500 sq. ft.">1000 - 2500 sq. ft. </option>
+                                            <option value="More than 2500 sq. ft.">More than 2500 sq. ft.</option>
+                                        </select>
+    								</div>
+        						</div>
+        						<div class="form-group">
+        						    <div class="col-xs-12 margin_20">
+    									<label for="comments">Comments</label>
+    									<textarea id="comments" class="form-control" v-model="form_data.comments"></textarea>
+    								</div>
+    							</div>
+        						<div class="form-group">
+        							<div class="col-xs-12">
+        								<button class="animated_btn" type="submit" :disabled="formSuccessPerm">
+        								    Submit <i class="fa fa-angle-right" aria-hidden="true"></i>
+    								    </button>
+        							</div>
+        						</div>
+        					</form>
+        					<div id="send_contact_success" class="alert alert-success text-left" role="alert" v-show="formSuccessPerm">
+        						<span class="glyphicon glyphicon-ok" aria-hidden="true"></span>
+        						<span class="sr-only">Success</span>
+        						Thank you! A member from our Permanent Leasing Team will contact you shortly.
+        					</div>
+        					<div id="send_contact_error" class="alert alert-danger text-left" role="alert" v-show="formErrorPerm">
+        						<span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span>
+        						<span class="sr-only">Error:</span>
+        						There was an error when trying to submit your request. Please try again later.
+        					</div>
             </div>
         </div>
         <div style="padding:20px 0;"></div>
