@@ -12,7 +12,7 @@
     					<p class="promo_div_name">{{promo.name}}</p>
     					<p class="promo_div_date">{{promo.start_date | moment("MMM D", timezone)}} - {{promo.end_date | moment("MMM D", timezone)}}</p>
     					<p class="promo_div_description">{{promo.description_short}}</p>
-    					<div class="promo_feature_share row is-table-row">
+    					<div class="promo_feature_share row">
         					<span class="feature_read_more col-sm-4">
         						<router-link :to="'/events/'+promo.slug" class="mobile_readmore" >
         							<p class="feature-readmore hvr-sweep-to-right" :aria="promo.name">View Event Details<i class="fa fa-chevron-right pull-right" aria-hidden="true"></i></p>
