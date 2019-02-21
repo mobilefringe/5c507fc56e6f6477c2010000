@@ -1,6 +1,6 @@
 <template>
 	<div class="job_dets_container" v-if="currentJob">
-		<div class="row">
+		<div class="row page_container">
 			<div class="col-sm-4 job_logo_container">
 				<div>
 					<!--<img v-lazy="currentJob.store.store_front_url_abs" alt=""/>-->
@@ -44,7 +44,7 @@
                 </social-sharing>
 			</div>
 		</div>
-		<div class="row" style="margin-left:0;">
+		<div class="row page_container" style="margin-left:0;">
 			<div class="col-sm-12 job_desc_container">
 				<div class="text-left job_description">
 					<p v-html="currentJob.rich_description"></p>
