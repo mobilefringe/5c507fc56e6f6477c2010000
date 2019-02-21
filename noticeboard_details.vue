@@ -13,7 +13,7 @@
 				<div class="event_details_container text-left">
     				<div>
     					<h1>{{currentEvent.title}}</h1>
-    					<p class="event_div_date">{{currentEvent.start_date | moment("MMM D", timezone)}} - {{currentEvent.end_date | moment("MMM D", timezone)}}</p>
+    					<p class="event_div_date">{{currentEvent.publish_date | moment("MMM D", timezone)}} - {{currentEvent.end_date | moment("MMM D", timezone)}}</p>
     				</div>
     			</div>
 			</div>
