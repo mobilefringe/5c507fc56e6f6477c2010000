@@ -3,12 +3,12 @@
 		<div class="promo_container" v-if="events.length > 0">
 		    <div class=" promo_dets" v-for="promo in events">
     			<div class="row page_container">
-    				<div class="col-sm-7" >
-    					<div class="promo_div_image" v-lazy-container="{ selector: 'img' }">
-    						<img :data-src="promo.image_url"  data-loading='//codecloud.cdn.speedyrails.net/sites/5b16b9686e6f6426c91e0000/image/png/1521035009104/Screen Shot 2018-03-14 at 9.43.24 AM.png' alt=""/>
-    					</div>
-    				</div>
-    				<div class="col-sm-5 promo_div_dets text-left">
+    				<!--<div class="col-sm-7" >-->
+    				<!--	<div class="promo_div_image" v-lazy-container="{ selector: 'img' }">-->
+    				<!--		<img :data-src="promo.image_url"  data-loading='//codecloud.cdn.speedyrails.net/sites/5b16b9686e6f6426c91e0000/image/png/1521035009104/Screen Shot 2018-03-14 at 9.43.24 AM.png' alt=""/>-->
+    				<!--	</div>-->
+    				<!--</div>-->
+    				<div class="col-sm-12 promo_div_dets text-left">
     					<p class="promo_div_name">{{promo.name}}</p>
     					<p class="promo_div_date">{{promo.start_date | moment("MMM D", timezone)}} - {{promo.end_date | moment("MMM D", timezone)}}</p>
     					<p class="promo_div_description">{{promo.description_short}}</p>
