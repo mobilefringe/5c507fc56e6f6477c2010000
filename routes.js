@@ -92,12 +92,12 @@ define([], function() {
             children: [{
                     path: '',
                     component: view('noticeboard'),
-                    name: 'eventList'
+                    name: 'noticeboard'
                 },
                 {
                     path: ':id',
                     component: view('noticeboard_details'),
-                    name: 'eventDetails',
+                    name: 'noticeboardDetails',
                     props: true
                 }
             ]
