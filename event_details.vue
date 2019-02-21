@@ -1,6 +1,6 @@
 <template>
-	<div class="event_dets_container page_container" v-if="currentEvent">
-		<div class="row">
+	<div class="event_dets_container " v-if="currentEvent">
+		<div class="row page_container">
 			<div class="col-sm-4 event_logo_container ">
     			<div class="hidden_phone">
     				<div v-if="currentEvent.eventable_type == 'Property'">
