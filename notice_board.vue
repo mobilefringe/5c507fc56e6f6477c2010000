@@ -73,7 +73,7 @@
               }  
             },
             created () {
-                this.$store.dispatch("getData", "events").then(response => {
+                this.$store.dispatch("getData", "blogs").then(response => {
                    this.dataLoaded = true;
                 }, error => {
                     console.error("Could not retrieve data from server. Please check internet connection and try again.");
