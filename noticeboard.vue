@@ -18,7 +18,7 @@
         							<p class="feature-readmore hvr-sweep-to-right" :aria="promo.name">View Event Details<i class="fa fa-chevron-right pull-right" aria-hidden="true"></i></p>
         						</router-link>
         					</span>
-        					<div class="text-right" v-if="promo">
+        					<div class="text-right share_container" v-if="promo">
             					<social-sharing :url="$root.shareURL('events',promo.slug)" :title="promo.title" :description="promo.body" :quote="_.truncate(promo.description, {'length': 99})" twitter-user="" :media="promo.image_url" inline-template >
                                 <div class="blog-social-share">
                                     <div class="social_share">
