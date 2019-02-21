@@ -84,13 +84,12 @@
                 ...Vuex.mapGetters([
                     'property',
                     'timezone',
-                    'findBlogByName',
                     'findBlogBySlug'
                 ]),
                 events() {
                     var vm = this;
+                    var blogs = this.findBlogBySlug('langhamsquare-noticeboard');
                     var temp_promo = [];
-                    var temp_job = [];
                     _.forEach(this.processedEvents, function(value, key) {
                         value.description_short = _.truncate(value.description, {
                             'length': 70
