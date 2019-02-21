@@ -21,7 +21,7 @@
 				<!--<img v-if="_.includes(currentEvent.image_url, 'missing') != true" :src="currentEvent.image_url" :alt="currentEvent.name"/>-->
 				<div class="event_desc_container">
     				<div class="text-left event_description">
-    					<p v-html="currentEvent.rich_description"></p>
+    					<p v-html="currentEvent.rich_body"></p>
     				</div>
     			</div>
     			<social-sharing :url="$root.shareURL('events',currentEvent.slug)" :title="currentEvent.title" :description="currentEvent.body" :quote="_.truncate(currentEvent.body, {'length': 99})" twitter-user="" :media="currentEvent.image_url" inline-template >
