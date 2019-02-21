@@ -89,6 +89,9 @@
                 events() {
                     var vm = this;
                     var blogs = this.findBlogBySlug('langhamsquare-noticeboard');
+                    if(blogs && blogs.posts){
+                        
+                    }
                     var temp_promo = [];
                     _.forEach(this.processedEvents, function(value, key) {
                         value.description_short = _.truncate(value.description, {
