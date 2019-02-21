@@ -1,5 +1,5 @@
 <template>
-	<div class="events_container" v-if="dataLoaded"><!-- for some reason if you do not put an outer container div this component template will not render -->
+	<div class="noticeboard_container" v-if="dataLoaded"><!-- for some reason if you do not put an outer container div this component template will not render -->
 		<div class="promo_container" v-if="events.length > 0">
 		    <div class=" promo_dets" v-for="promo in events">
     			<div class="row page_container">
