@@ -120,6 +120,9 @@
                     } else {
                       this.currentStore.no_store_logo = false
                     }
+                    if (!this.currentStore.svgmap_region) {
+                          this.currentStore.svgmap_region = this.currentStore.id
+                        }
                     
                     var vm = this;
                     if (this.currentStore.store_hours) {
