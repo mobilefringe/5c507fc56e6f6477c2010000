@@ -18,7 +18,7 @@
                     >
                         <h1 class="no_logo_text">
                         {{ currentPromo.store.name }}
-                        <span v-if="promo.store.name_2"><br>({{currentPromo.store.name_2}})</span>
+                        <span v-if="currentPromo.store.name_2"><br>({{currentPromo.store.name_2}})</span>
                           <!--<div class="store_text">-->
                           <!--  <h2></h2>-->
                           <!--</div>-->
