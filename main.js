@@ -36,9 +36,9 @@ require.config({
         'bootstrap-vue' : '//unpkg.com/bootstrap-vue@latest/dist/bootstrap-vue',
         //mappplic-png--map dependencies
         'mousewheel' : 'https://cdnjs.cloudflare.com/ajax/libs/jquery-mousewheel/3.1.13/jquery.mousewheel.min',
-        // 'mapplic' : 'https://mmvue.codecloudapp.com/mapplic',
+        'mapplic' : 'https://mmvue.codecloudapp.com/mapplic',
         'hammer' : 'https://codecloud.cdn.speedyrails.net/sites/59bac7db6e6f644f22ba0000/text/javascript/1484859750000/hammer.min',
-        'mapplic-svg' : 'https://mmvue.codecloudapp.com/mapplic.vue?noext',
+        // 'mapplic-svg' : 'https://mmvue.codecloudapp.com/mapplic.vue?noext',
         //google map dependcies
         'google-map-api': 'https://maps.googleapis.com/maps/api/js?key=AIzaSyCukCjH3fsuDYBdI44hZKL43m60jEToJjY',
         'google_map': 'https://mmvue.codecloudapp.com/google_map.vue?noext',
