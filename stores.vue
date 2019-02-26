@@ -18,7 +18,11 @@
                                     :searchable="false" 
                                     :label="'name'" 
                                     :on-change="dropPin"
-                                ></v-select>
+                                >
+                                    <template slot="option" slot-scope="option">
+                                        {{ option.name }} <span v-if="option.name_2">({{option.name_2}})</span>
+                                    </template>
+                                </v-select>
                             </div>
                         </div>
                         <div class="col-md-8">
