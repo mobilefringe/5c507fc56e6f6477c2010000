@@ -1,7 +1,7 @@
 <template>
 	<div class="page_container store_dets_container" v-if="dataLoaded" id="store_dets_container">
 		<div class="row">
-			<div class="col-sm-4 store_logo_container">
+			<div class="col-md-4 store_logo_container">
 				<div>
 					<!--<img :src="currentStore.store_front_url_abs" :alt="currentStore.name"/>-->
 					<img
@@ -26,7 +26,7 @@
                     </div>
 				</div>
 			</div>
-			<div class="col-sm-8 store_map_container">
+			<div class="col-md-8 store_map_container">
 				<div id="mapsvg_store_detail">
 					<mapplic-map ref="svgmap_ref" :height="300" :minimap= "false" :deeplinking="false" :sidebar="false" :hovertip="true" :maxscale= "5" :storelist="processedStores" :floorlist="floorList" :svgWidth="2500" :svgHeight="2500" @updateMap="updateSVGMap" :key="currentStore.id"></mapplic-map>
 				</div>
