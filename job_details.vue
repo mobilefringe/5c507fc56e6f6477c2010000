@@ -18,6 +18,7 @@
                     >
                         <h1 class="no_logo_text">
                         {{ currentJob.store.name }}
+                        <span v-if="promo.store.name_2"><br>({{currentJob.store.name_2}})</span>
                           <!--<div class="store_text">-->
                           <!--  <h2></h2>-->
                           <!--</div>-->
