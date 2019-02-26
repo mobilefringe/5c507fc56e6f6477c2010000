@@ -34,6 +34,7 @@
                                     <img class="result_logo" :src="property.default_logo_url"/>    
                                 </div>
                                 <div class="col-sm-9 search_result_content">
+                                    <h1 v-if="">{{result.name}}<span v-if="result.name_2"><br>({{result.name_2}})</span></h1>
                                     <h1>{{result.name}}</h1>
                                     <p>{{truncated(result.description)}}</p>
                                     <router-link v-if="result.store_front_url_abs" class="result_link hvr-icon-forward" :to="{ name: 'storeDetails', params:{ id:result.slug }}">
