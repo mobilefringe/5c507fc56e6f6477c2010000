@@ -89,43 +89,6 @@
                 getSVGMap(){
                   return "//mallmaverick.com"+this.property.svgmap_url;  
                 },
-                // getSVGMap() {
-                //     var svg_maps = this.findRepoByName("SVG Maps")
-                //     if(svg_maps != null && svg_maps !== undefined){
-                //         svg_maps = svg_maps.images;
-                //         var floor_one = "";
-                //         var floor_two = "";
-                //         _.forEach(svg_maps, function(value, key) {
-                //             if(value.id == 41084) {
-                //                 floor_one = _.split(value.image_url, '?');
-                //                 floor_one = floor_one[0];
-                //             }
-                //             if (value.id == 41085) {
-                //                 floor_two = _.split(value.image_url, '?');
-                //                 floor_two = floor_two[0];
-                //             }
-                //         });
-                //         this.floorOne = floor_one;
-                //         this.floorTwo = floor_two;
-                //     }
-                // },
-                // getMiniMap () {
-                //     var svg_maps = this.findRepoByName("PNG Mini Map").images 
-                //     var floor_one = "";
-                //     var floor_two = "";
-                //     _.forEach(svg_maps, function(value, key) {
-                //         if(value.id == 37990) {
-                //             floor_one = _.split(value.image_url, '?');
-                //             floor_one = floor_one[0];
-                //         }
-                //         if (value.id == 37991) {
-                //             floor_two = _.split(value.image_url, '?');
-                //             floor_two = floor_two[0];
-                //         }
-                //     });
-                //     this.miniOne = floor_one;
-                //     this.miniTwo = floor_two;
-                // },
                 floorList () {
                     var floor_list = [];
                     
