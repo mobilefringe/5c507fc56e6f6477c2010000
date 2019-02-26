@@ -4,7 +4,7 @@
             <div v-if="dataLoaded" v-cloak>
                 <div class="page_container margin_30">
                     <div class="row">
-                        <div class="col-md-3">
+                        <div class="col-md-4">
                             <div class="hidden_phone">
                                 <h3 class="inside_page_title">Find Store</h3>
                                 <div class="store_list_container hidden-mobile" v-if="allStores">
@@ -21,7 +21,7 @@
                                 ></v-select>
                             </div>
                         </div>
-                        <div class="col-md-9">
+                        <div class="col-md-8">
                             <mapplic-map ref="mapplic_ref" :height="566" :minimap= "false" :deeplinking="false" :sidebar="false" :hovertip="true" :maxscale= "5" :storelist="allStores" :floorlist="floorList" tooltiplabel="View Store Details" :svgHeight="2500" :svgWidth="2500"></mapplic-map>
                         </div>
                     </div>
