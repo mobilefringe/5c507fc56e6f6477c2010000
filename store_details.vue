@@ -39,7 +39,7 @@
 					<p>{{currentStore.category_name}}</p>
 					<p>{{currentStore.phone}}</p>
 					<div class="margin_20">
-					    <a v-bind:href="'//'+currentStore.website" target="_blank">Visit Store Site</a>    
+					    <a v-bind:href="'//'+currentStore.website" target="_blank">Visit Store Website</a>    
 					</div>
 					
 					<div v-if="currentStore.store_hours && currentStore.store_hours.length > 0">
