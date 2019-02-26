@@ -33,7 +33,7 @@
 			</div>
 		</div>
 		<div class="row">
-			<div class="col-sm-4 store_details_container">
+			<div class="col-md-4 store_details_container">
 				<div>
 					<h1>{{currentStore.name}}<span v-if="currentStore.name_2"><br/>({{currentStore.name_2}})</span></h1>
 					<p>{{currentStore.category_name}}</p>
@@ -55,7 +55,7 @@
 					</div>
 				</div>
 			</div>
-			<div class="col-sm-8 store_desc_container">
+			<div class="col-md-8 store_desc_container">
 				<div class="text-left store_description">
 					<p>{{currentStore.description}}</p>
 				</div>
@@ -64,12 +64,12 @@
 		<div class="store_promo_container" v-if="currentStore && currentStore.total_published_promos > 0">
 		    <div class="promo_container_title text-left all_caps"> Sales & Promotions</div>
 		    <div class="row store_promo_dets text-left" v-for="promo in promotions">
-		        <div class="col-sm-7" >
+		        <div class="col-md-7" >
 		        <div class="promo_div_image">
 		            <img :src="promo.image_url" :alt="promo.name"/>
 		        </div>
 		        </div>
-		        <div class="col-sm-5 promo_div_dets">
+		        <div class="col-md-5 promo_div_dets">
 		            <p class="promo_div_name">{{promo.name}}</p>
 		            <p class="promo_div_store_name">{{currentStore.name | uppercase}}</p>
 		            <p class="promo_div_date">{{promo.start_date | moment("MMM D", timezone)}} - {{promo.end_date | moment("MMM D", timezone)}}</p>
