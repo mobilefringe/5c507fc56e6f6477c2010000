@@ -28,7 +28,7 @@
 				</div>
 				<div style="margin-left:0; margin-top: 25px;">
 					<h1>{{currentPromo.name}}</h1>
-					<router-link :to="'/stores/'+currentPromo.store.slug"><p class="promo_store_name">{{currentPromo.store.name}} <span v-if="currentPromo.store.name_2">({{promo.store.name_2}})</span></p></router-link>
+					<router-link :to="'/stores/'+currentPromo.store.slug"><p class="promo_store_name">{{currentPromo.store.name}} <span v-if="currentPromo.store.name_2">({{currentPromo.store.name_2}})</span></p></router-link>
 					<p class="promo_div_date">{{currentPromo.start_date | moment("MMM D", timezone)}} - {{currentPromo.end_date | moment("MMM D", timezone)}}</p>
 				</div>
 			</div>
