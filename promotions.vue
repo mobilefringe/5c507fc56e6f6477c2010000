@@ -25,7 +25,9 @@
         				</div>
         				<div class="col-sm-5 promo_div_dets text-left">
         					<p class="promo_div_name">{{promo.name}}</p>
-        					<p class="promo_div_store_name" v-if="promo.store"><router-link :to="'/stores/'+promo.store.slug">{{promo.store.name | uppercase}}</router-link></p>
+        					<p class="promo_div_store_name" v-if="promo.store"><router-link :to="'/stores/'+promo.store.slug">{{promo.store.name | uppercase}}
+        					    <span v-if="currentStore.name_2">({{promo.store.name_2}})</span>
+        					</router-link></p>
         					<p class="promo_div_date">{{promo.start_date | moment("MMM D", timezone)}} - {{promo.end_date | moment("MMM D", timezone)}}</p>
         					<p class="promo_div_description">{{promo.description_short}}</p>
         					<div class="promo_feature_share row is-table-row">
