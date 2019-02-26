@@ -339,7 +339,12 @@
                             //for testing limiting the store numbers to vm
                             var temp_val = {};
                             temp_val.id = val.svgmap_region;
-                            temp_val.title = val.name;
+                            if(val.name_2){
+                                temp_val.title = val.name + "("+val.name_2+")";
+                            } else {
+                                temp_val.title = val.name;
+                            }
+                            
                             temp_val.about = _.truncate(val.description, { 'length':200, 'separator': ' ' });
                             if(val.categories != null) {
                                 if(val.categories.length>1){
