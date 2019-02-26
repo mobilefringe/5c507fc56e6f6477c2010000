@@ -35,7 +35,7 @@
 		<div class="row">
 			<div class="col-sm-4 store_details_container">
 				<div>
-					<h1>{{currentStore.name}}</h1>
+					<h1>{{currentStore.name}}<span v-if="currentStore.name_2">({{currentStore.name_2}})</span></h1>
 					<p>{{currentStore.category_name}}</p>
 					<p>{{currentStore.phone}}</p>
 					<div class="margin_20">
