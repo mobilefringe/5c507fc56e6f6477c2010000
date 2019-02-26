@@ -129,7 +129,7 @@ html {
 }
 
 body {
-  font-family: arial;
+  font-family: $font_family;
   font-size: 12pt;
   color: #000;
   overflow-x: hidden;
@@ -189,7 +189,7 @@ img[lazy=loading] {
 }
 
 p, ol, ul, td {
-  font-family: arial;
+  font-family: $font_family;
 }
 
 a, .pointer {
@@ -917,7 +917,7 @@ ul.nav li.dropdown:hover > .dropdown-menu-hover {
     height: 24px !important;
     margin: 0 -25px 0 0 !important;
     padding: 0 10px !important;
-    font: 11px arial, Arial, sans-serif !important;
+    font: 11px $font_family, $font_family, sans-serif !important;
     border: 1px solid #cccccc !important;
     background: #ffffff !important;
     -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset;
@@ -939,7 +939,7 @@ ul.nav li.dropdown:hover > .dropdown-menu-hover {
   height: 24px !important;
   margin: 0 -25px 0 0 !important;
   padding: 0 10px !important;
-  font: 11px arial, Arial, sans-serif !important;
+  font: 11px $font_family, $font_family, sans-serif !important;
   border: 1px solid #cccccc !important;
   background: #ffffff !important;
   -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset;
@@ -1052,7 +1052,7 @@ ul.nav li.dropdown:hover > .dropdown-menu-hover {
     font-size: 11px;
     color: #000;
     line-height: 26px;
-    font-family: arial;
+    font-family: $font_family;
   }
 }
 
@@ -1231,7 +1231,7 @@ ul.nav li.dropdown:hover > .dropdown-menu-hover {
 
 .banner-description {
   /* DINING, ENTERTAINMEN: */
-  font-family: arial;
+  font-family: $font_family;
   font-size: 36px;
   color: #FFFFFF;
   letter-spacing: 2px;
@@ -1242,7 +1242,7 @@ ul.nav li.dropdown:hover > .dropdown-menu-hover {
   /* Button: */
   border: 1px solid #FFFFFF;
   /* See All: */
-  font-family: arial;
+  font-family: $font_family;
   font-size: 14px;
   color: #FFFFFF;
   letter-spacing: 1.56px;
@@ -1276,7 +1276,7 @@ ul.nav li.dropdown:hover > .dropdown-menu-hover {
     -ms-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%);
     /* FIND YOUR STORE: */
-    font-family: arial;
+    font-family: $font_family;
     font-size: 18px;
     font-weight: bold;
     color: #FFFFFF;
@@ -1303,7 +1303,7 @@ ul.nav li.dropdown:hover > .dropdown-menu-hover {
     -webkit-transform: translate(-50%, -50%);
     -ms-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%);
-    font-family: arial;
+    font-family: $font_family;
     font-size: 18px;
     font-weight: bold;
     color: #FFFFFF;
@@ -1339,7 +1339,7 @@ ul.nav li.dropdown:hover > .dropdown-menu-hover {
 }
 
 .feature-html {
-  font-family: arial;
+  font-family: $font_family;
   font-weight: bold;
   color: #55494b;
   font-size: 10pt;
@@ -1347,7 +1347,7 @@ ul.nav li.dropdown:hover > .dropdown-menu-hover {
 
 .feature-desc {
   /* THIS WEEKEND IS BLAC: */
-  font-family: arial;
+  font-family: $font_family;
   font-size: 20px;
   color: #000000;
   letter-spacing: 1.5px;
@@ -1360,7 +1360,7 @@ ul.nav li.dropdown:hover > .dropdown-menu-hover {
 .feature-readmore {
   float: none;
   background: #666666;
-  font-family: arial;
+  font-family: $font_family;
   font-size: 14px;
   color: #FFFFFF;
   letter-spacing: 1.56px;
@@ -1443,7 +1443,7 @@ ul.nav li.dropdown:hover > .dropdown-menu-hover {
   p {
     font-size: 11px;
     line-height: 22px;
-    font-family: arial;
+    font-family: $font_family;
   }
 }
 
@@ -1451,7 +1451,7 @@ ul.nav li.dropdown:hover > .dropdown-menu-hover {
   float: right;
   width: 32%;
   color: #b9b9b9;
-  font-family: arial;
+  font-family: $font_family;
   h1 {
     border-bottom: 1px solid #c9c8c8;
     padding-bottom: 10px;
@@ -1475,7 +1475,7 @@ ul.nav li.dropdown:hover > .dropdown-menu-hover {
 
 .modalDialog {
   position: fixed;
-  font-family: Arial, sans-serif;
+  font-family: $font_family, sans-serif;
   top: 0;
   right: 0;
   bottom: 0;
@@ -1569,7 +1569,7 @@ ul.nav li.dropdown:hover > .dropdown-menu-hover {
   font-size: 14px !important;
   line-height: 16px;
   margin-bottom: 0;
-  font-family: arial;
+  font-family: $font_family;
 }
 
 .thumb-desc {
@@ -1726,7 +1726,7 @@ ul.nav li.dropdown:hover > .dropdown-menu-hover {
   padding: 10px 0 15px;
   font-size: 30px;
   line-height: 30px;
-  font-family: arial;
+  font-family: $font_family;
   font-weight: lighter;
 }
 
@@ -1892,7 +1892,7 @@ ul.nav li.dropdown:hover > .dropdown-menu-hover {
 }
 
 .featured_post a {
-  font: 12px/24px arial, sans-serif;
+  font: 12px/24px $font_family, sans-serif;
   &:hover {
     text-decoration: underline;
   }
@@ -1905,7 +1905,7 @@ ul.nav li.dropdown:hover > .dropdown-menu-hover {
 }
 
 .blog-feature-body {
-  font: 11px/22px arial, sans-serif;
+  font: 11px/22px $font_family, sans-serif;
 }
 
 .latest-header {
@@ -1991,7 +1991,7 @@ ul.nav li.dropdown:hover > .dropdown-menu-hover {
 .topic-div {
   margin-left: 0;
   li {
-    font: bold 14px arial, sans-serif;
+    font: bold 14px $font_family, sans-serif;
     color: #0c0c0c;
     list-style: none;
     margin-bottom: 5px;
@@ -2404,7 +2404,7 @@ ul.nav li.dropdown:hover > .dropdown-menu-hover {
 
 .most-wanted-view-window-link {
   color: #ff6875 !important;
-  font: 16px/24px arial, sans-serif !important;
+  font: 16px/24px $font_family, sans-serif !important;
   text-align: left;
   margin-bottom: 0;
   &:hover {
@@ -2484,7 +2484,7 @@ ul.nav li.dropdown:hover > .dropdown-menu-hover {
 .back-link {
   color: #0c0c0c !important;
   float: right;
-  font: 14px arial, sans-serif !important;
+  font: 14px $font_family, sans-serif !important;
   margin-top: -15px;
 }
 
@@ -2538,7 +2538,7 @@ ul.nav li.dropdown:hover > .dropdown-menu-hover {
 }
 
 .social-post-body p {
-  font: 16px/22px arial, sans-serif;
+  font: 16px/22px $font_family, sans-serif;
   color: #6b6c70;
 }
 
@@ -2558,7 +2558,7 @@ ul.nav li.dropdown:hover > .dropdown-menu-hover {
 }
 
 .northpark_news_title {
-  font: 24px Arial,sans-serif !important;
+  font: 24px $font_family,sans-serif !important;
   color: #6b6c70;
   margin-bottom: 0;
 }
@@ -2875,7 +2875,7 @@ ul.nav li.dropdown:hover > .dropdown-menu-hover {
 .store_detail_content {
   margin: 0;
   font-size: 11px;
-  font-family: arial;
+  font-family: $font_family;
 }
 
 .store_detail_hour_list {
@@ -3295,7 +3295,7 @@ ul.nav li.dropdown:hover > .dropdown-menu-hover {
 
 .promo_detail_name {
   font-size: 22px;
-  font-family: arial;
+  font-family: $font_family;
   font-weight: bold;
   margin-bottom: 0;
 }
@@ -3508,12 +3508,12 @@ ul.nav li.dropdown:hover > .dropdown-menu-hover {
   color: black;
   line-height: 24px !important;
   margin-bottom: 0;
-  font-family: Arial,sans-serif;
+  font-family: $font_family,sans-serif;
 }
 
 .search_result_desc {
   font-size: 13px !important;
-  font-family: Arial,sans-serif;
+  font-family: $font_family,sans-serif;
 }
 
 /***********************************/
@@ -3665,7 +3665,7 @@ h2 {
 h3 {
   font-size: 14px;
   font-weight: normal;
-  font-family: arial;
+  font-family: $font_family;
 }
 
 h4 {
@@ -3748,7 +3748,7 @@ legend {
 
 .page_header {
   /* STORES DIRECTORY & M: */
-  font-family: arial;
+  font-family: $font_family;
   font-size: 16px;
   color: #000000;
   letter-spacing: 1.88px;
@@ -3756,7 +3756,7 @@ legend {
 }
 
 .page_header_title {
-  font-family: arial;
+  font-family: $font_family;
   font-size: 16px;
   color: #000000;
   letter-spacing: 1.88px;
@@ -4537,7 +4537,7 @@ legend {
     border: none;
     color: #fff;
     padding: 10px;
-    font-family: arial, sans-serif;
+    font-family: $font_family, sans-serif;
     font-size: 10pt;
     width: 100%;
     text-align: left;
