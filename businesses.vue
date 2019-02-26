@@ -8,7 +8,7 @@
                             <div class="hidden_phone">
                                 <h3 class="inside_page_title">Find Store</h3>
                                 <div class="store_list_container hidden-mobile" v-if="allStores">
-                                    <p class="store_name" v-for="store in allStores" v-on:click="dropPin(store)">{{store.name}}<span v-if="store.name_2">({{store.name_2}})</span></p>
+                                    <p class="store_name" v-for="store in allStores" v-on:click="dropPin(store)">{{store.name}} <span v-if="store.name_2">({{store.name_2}})</span></p>
                                 </div>
                             </div>
                             <div class="show_phone mobile_store_select">
