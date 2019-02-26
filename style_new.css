@@ -5165,7 +5165,7 @@ legend {
 
 /*** IE specific styling! *****/
 @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
-    #primary_nav ul .dropdown-content a.hvr-underline-from-center:before {
-  max-width: 100%;
-    }
+  #primary_nav ul .dropdown-content a.hvr-underline-from-center:before {
+    max-width: 100%;
+  }
 }
