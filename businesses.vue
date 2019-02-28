@@ -6,7 +6,8 @@
                     <div class="row">
                         <div class="col-md-4">
                             <div class="hidden_phone">
-                                <h3 class="inside_page_title">Find Store</h3>
+                                <h2 class="inside_page_title">Find Store</h2>
+                                <v-select v-if="allCategories" v-model="selected" :options="allCategories" :searchable="false" class="category-select"></v-select>
                                 <div class="store_list_container hidden-mobile" v-if="allStores">
                                     <p class="store_name" v-for="store in allStores" v-on:click="dropPin(store)">{{store.name}} <span v-if="store.name_2">({{store.name_2}})</span></p>
                                 </div>
@@ -18,11 +19,15 @@
                                     :searchable="false" 
                                     :label="'name'" 
                                     :on-change="dropPin"
-                                ></v-select>
+                                >
+                                    <template slot="option" slot-scope="option">
+                                        {{ option.name }} <span v-if="option.name_2">({{option.name_2}})</span>
+                                    </template>
+                                </v-select>
                             </div>
                         </div>
                         <div class="col-md-8">
-                            <mapplic-map ref="mapplic_ref" :height="566" :minimap= "false" :deeplinking="false" :sidebar="false" :hovertip="true" :maxscale= "5" :storelist="allStores" :floorlist="floorList" tooltiplabel="View Store Details" :svgHeight="2500" :svgWidth="2500"></mapplic-map>
+                            <mapplic-map ref="mapplic_ref" :height="566" :minimap= "false" :deeplinking="false" :sidebar="false" :hovertip="true" :maxscale= "5" :storelist="mapStores" :floorlist="floorList" tooltiplabel="View Store Details" :svgHeight="2500" :svgWidth="2500"></mapplic-map>
                         </div>
                     </div>
                 </div>
@@ -39,7 +44,8 @@
             data: function() {
                 return {
                     dataLoaded: false,
-                    pageBanner: null
+                    pageBanner: null,
+                    selected: "Select a Category",
                 }
             },
             created (){
@@ -63,9 +69,51 @@
                     "property",
                     "timezone",
                     "findRepoByName",
+                    "processedCategories",
+                    "storesByCategoryName",
                     "processedStores",
                 ]),
+                allCategories() {
+                    var categories = this.processedCategories
+                    var categoryData = [];
+                    _.forEach(categories, function (value, key) {
+                        if (value.store_ids != null) {
+                            var name = value.name;
+                            var id = value.id;
+                            if (name != null && id != null) {
+                                var object = {
+                                    'label': name,
+                                    'value': id,
+                                }
+                                categoryData.push(object)
+                            }
+                        }
+                    });
+                    
+                    categoryData.unshift('All');
+                    return categoryData
+                },
                 allStores() {
+                    var all_stores = this.processedStores;
+                    if (typeof(this.selected) == "string" || typeof(this.selected) == undefined){
+                        _.forEach(all_stores, function(value, key) {
+                            value.zoom = 2;
+                            if(!value.svgmap_region){
+                                value.svgmap_region = value.id;
+                            }
+                        });
+                        return all_stores
+                    } else {
+                        try {
+                            var catName = this.selected.value;
+                            var sortedList = _.filter(all_stores, function(o) { return _.indexOf(o.categories, _.toNumber(catName)) > -1; });
+                            return sortedList
+                        } catch (e) {
+                            console.log("errer", e)
+                        }
+                    }
+                },
+                mapStores() {
                     var all_stores = this.processedStores;
                     _.forEach(all_stores, function(value, key) {
                         value.zoom = 2;
@@ -81,9 +129,6 @@
                     initZoom.zoom = 1;
                     all_stores.push(initZoom)
                     return all_stores
-                },
-                getSVGMap(){
-                  return "//mallmaverick.com"+this.property.svgmap_url;  
                 },
                 floorList () {
                     var floor_list = [];
@@ -102,7 +147,7 @@
             methods: {
                 loadData: async function() {
                     try {
-                        let results = await Promise.all([this.$store.dispatch("getData", "repos")]);
+                        let results = await Promise.all([this.$store.dispatch("getData", "repos"), this.$store.dispatch("getData", "categories")]);
                     } catch (e) {
                         console.log("Error loading data: " + e.message);
                     }
