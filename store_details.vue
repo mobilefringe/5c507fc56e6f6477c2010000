@@ -67,7 +67,10 @@
 		            <div v-if="!$root.checkImageURL(promo)" class="store_details_image center-block">
                         <div class="no_logo">
                             <img class="store_img" src="//www.mallmaverick.com/system/site_images/photos/000/041/782/original/transparent_logo.png?1533845225" alt="">
-                            <h2 class="store_details_name">{{ promo.store.name }}</h2>
+                            <h1 class="no_logo_text">
+                        {{ currentStore.name }}
+                        <span v-if="currentStore.name_2"><br/>({{currentStore.name_2}})</span>
+                        </h1>
                         </div>    
                     </div>
                     <img v-else class="center-block" :src="$root.checkImageURL(promo)" :alt="promo.name" />
