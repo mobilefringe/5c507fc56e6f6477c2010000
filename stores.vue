@@ -6,7 +6,7 @@
                     <div class="row">
                         <div class="col-md-4">
                             <div class="hidden_phone">
-                                <h2 class="inside_page_title">Find Store</h3>
+                                <h2 class="inside_page_title">Find Store</h2>
                                 <div class="store_list_container hidden-mobile" v-if="allStores">
                                     <p class="store_name" v-for="store in allStores" v-on:click="dropPin(store)">{{store.name}} <span v-if="store.name_2">({{store.name_2}})</span></p>
                                 </div>
