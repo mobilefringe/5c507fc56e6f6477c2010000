@@ -94,6 +94,26 @@
                 },
                 allStores() {
                     var all_stores = this.processedStores;
+                    if (typeof(this.selected) == "string" || typeof(this.selected) == undefined){
+                        _.forEach(all_stores, function(value, key) {
+                            value.zoom = 2;
+                            if(!value.svgmap_region){
+                                value.svgmap_region = value.id;
+                            }
+                        });
+                        return all_stores
+                    } else {
+                        try {
+                            var catName = this.selected.value;
+                            var sortedList = _.filter(all_stores, function(o) { return _.indexOf(o.categories, _.toNumber(catName)) > -1; });
+                            return sortedList
+                        } catch (e) {
+                            console.log("errer", e)
+                        }
+                    }
+                },
+                mapStores() {
+                    var all_stores = this.processedStores;
                     _.forEach(all_stores, function(value, key) {
                         value.zoom = 2;
                         if(!value.svgmap_region){
@@ -108,9 +128,6 @@
                     initZoom.zoom = 1;
                     all_stores.push(initZoom)
                     return all_stores
-                },
-                getSVGMap(){
-                  return "//mallmaverick.com"+this.property.svgmap_url;  
                 },
                 floorList () {
                     var floor_list = [];
