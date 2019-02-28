@@ -68,7 +68,7 @@
                 allStores() {
                     var all_stores = _.filter(this.processedStores, function(o){
                     //   return _.includes(o.categories,) 
-                       return o.store_ids.some(r => store_ids.includes(r))
+                       return o.categories.some(r => store_ids.includes(r))
                     });
                     _.forEach(all_stores, function(value, key) {
                         value.zoom = 2;
