@@ -44,7 +44,8 @@
             data: function() {
                 return {
                     dataLoaded: false,
-                    pageBanner: null
+                    pageBanner: null,
+                    selected: "Select a Category",
                 }
             },
             created (){
