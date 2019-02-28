@@ -19,9 +19,6 @@
                         <h1 class="no_logo_text">
                         {{ currentStore.name }}
                         <span v-if="currentStore.name_2"><br/>({{currentStore.name_2}})</span>
-                          <!--<div class="store_text">-->
-                          <!--  <h2></h2>-->
-                          <!--</div>-->
                         </h1>
                     </div>
 				</div>
