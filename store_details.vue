@@ -70,7 +70,7 @@
                             <h2 class="store_details_name">{{ promo.store.name }}</h2>
                         </div>    
                     </div>
-                    <img v-else class="center-block" :src="checkImageURL(promo)" :alt="promo.name" />
+                    <img v-else class="center-block" :src="$root.checkImageURL(promo)" :alt="promo.name" />
 		        </div>
 		        </div>
 		        <div class="col-md-5 promo_div_dets">
