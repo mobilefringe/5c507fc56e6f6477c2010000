@@ -162,7 +162,21 @@ require(['Vue', 'vuex', 'vue2-filters', 'vue_router', 'routes', 'datastore', 'vu
                         })
                     }, 200)
                 }
-            }
+            },
+            checkImageURL(value) {
+                if (_.includes(value.image_url, 'missing')) {
+                    if (value.store === null || value.store === undefined) {
+                        return 'https://www.mallmaverick.com/system/site_images/photos/000/044/637/original/default_logo.png?1539618404'
+                    } else if (value.store != null && value.store != undefined && _.includes(value.store.store_front_url_abs, 'missing')
+                    ) {
+                        return 'https://www.mallmaverick.com/system/site_images/photos/000/044/637/original/default_logo.png?1539618404'
+                    } else {
+                        return value.store.store_front_url_abs
+                    }
+                } else {
+                    return value.promo_image_url_abs
+                }
+            },
         },
         router: router,
         store,
