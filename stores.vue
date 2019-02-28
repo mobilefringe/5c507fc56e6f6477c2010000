@@ -68,24 +68,29 @@
                     "property",
                     "timezone",
                     "findRepoByName",
+                    "processedCategories",
+                    "storesByCategoryName",
                     "processedStores",
                 ]),
-                allStores() {
-                    var all_stores = this.processedStores;
-                    _.forEach(all_stores, function(value, key) {
-                        value.zoom = 2;
-                        if(!value.svgmap_region){
-                            value.svgmap_region = value.id;
+                allCategories() {
+                    var categories = this.processedCategories
+                    var categoryData = [];
+                    _.forEach(categories, function (value, key) {
+                        if (value.store_ids != null) {
+                            var name = value.name;
+                            var id = value.id;
+                            if (name != null && id != null) {
+                                var object = {
+                                    'label': name,
+                                    'value': id,
+                                }
+                                categoryData.push(object)
+                            }
                         }
                     });
-                    var initZoom = {};
-                    initZoom.svgmap_region = "init";
-                    initZoom.z_coordinate = 1;
-                    initZoom.x = 0.5;
-                    initZoom.y = 0.5;
-                    initZoom.zoom = 1;
-                    all_stores.push(initZoom)
-                    return all_stores
+                    
+                    categoryData.unshift('All');
+                    return categoryData
                 },
                 getSVGMap(){
                   return "//mallmaverick.com"+this.property.svgmap_url;  
