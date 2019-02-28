@@ -64,12 +64,12 @@
 		        <div class="col-md-7" >
 		        <div class="promo_div_image">
 		            <!--<img :src="promo.image_url" :alt="promo.name"/>-->
-		            <!--<div v-if="!$root.checkImageURL(promo)" class="store_details_image center-block">-->
-                        <div class="no_logo" v-if="!$root.checkImageURL(promo)">
+		            <div v-if="!$root.checkImageURL(promo)" class="store_details_image center-block">
+                        <div class="no_logo">
                             <img class="store_img" src="//www.mallmaverick.com/system/site_images/photos/000/041/782/original/transparent_logo.png?1533845225" alt="">
                             <h2 class="store_details_name">{{ promo.store.name }}</h2>
                         </div>    
-                    <!--</div>-->
+                    </div>
                     <img v-else class="center-block" :src="$root.checkImageURL(promo)" :alt="promo.name" />
 		        </div>
 		        </div>
