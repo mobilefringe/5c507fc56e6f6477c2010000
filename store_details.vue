@@ -137,11 +137,11 @@
                         current_promo.description_short = _.truncate(current_promo.description, {
                             'length': 70
                         });
-                        if (_.includes(current_promo.image_url, 'missing')) {
-                            current_promo.image_url = "//codecloud.cdn.speedyrails.net/sites/5c507fc56e6f6477c2010000/image/jpeg/1548062300000/Mall_StoreLogo_600x600px_Template.jpg"; 
-                        } else {
-                            current_promo.image_url = current_promo.image_url;
-                        }
+                        // if (_.includes(current_promo.image_url, 'missing')) {
+                        //     current_promo.image_url = "//codecloud.cdn.speedyrails.net/sites/5c507fc56e6f6477c2010000/image/jpeg/1548062300000/Mall_StoreLogo_600x600px_Template.jpg"; 
+                        // } else {
+                        //     current_promo.image_url = current_promo.image_url;
+                        // }
                         temp_promo.push(current_promo);
                     });
                     _.forEach(this.currentStore.jobs, function(value, key) {
