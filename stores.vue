@@ -133,8 +133,8 @@
                     return all_stores
                 },
                 getSVGMap() {
-                    var svg_maps = this.findRepoByName("SVG Maps").images 
-                    if(svg_maps && svg_maps.images)
+                    var svg_maps = this.findRepoByName("SVG Maps") 
+                    if(svg_maps && svg_maps.images) {
                     var floor_one = "";
                     var floor_two = "";
                     _.forEach(svg_maps, function(value, key) {
@@ -149,6 +149,7 @@
                     });
                     this.floorOne = floor_one;
                     this.floorTwo = floor_two;
+                    }
                 },
                 floorList () {
                     var floor_list = [];
