@@ -273,8 +273,7 @@
                 },
                 updateSVGMap(map) {
                     this.map = map;
-                    console.log("Store", this.currentStore)
-                    this.dropPin(this.currentStore)
+                    this.dropPin(this.currentStore);
                     // this.svgMapRef.showLocation(this.currentStore.svgmap_region);
                     // this.svgMapRef.addActiveClass(this.currentStore.svgmap_region);
                 },
