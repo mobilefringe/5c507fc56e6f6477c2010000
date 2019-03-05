@@ -155,6 +155,7 @@
                         });
                         this.floorOne = floor_one;
                         this.floorTwo = floor_two;
+                        this.floorThree = =floor_three
                     }
                 },
                 floorList () {
