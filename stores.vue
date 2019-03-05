@@ -47,7 +47,7 @@
                     pageBanner: null,
                     selected: "Select a Category",
                     floorOne: null,
-                    floorTwo: null,
+                    floorTwo: null
                 }
             },
             created (){
@@ -62,7 +62,7 @@
                             "image_url": "//codecloud.cdn.speedyrails.net/sites/5b88438d6e6f641e8d3c0000/image/png/1531495616000/inside_banner.png"
                         }
                     }
-                    this.getSVGMap;
+                    // this.getSVGMap;
                     this.dataLoaded = true;
                 });
             },
@@ -131,6 +131,23 @@
                     initZoom.zoom = 1;
                     all_stores.push(initZoom)
                     return all_stores
+                },
+                getSVGMap() {
+                    var svg_maps = this.findRepoByName("SVG Maps").images 
+                    var floor_one = "";
+                    var floor_two = "";
+                    _.forEach(svg_maps, function(value, key) {
+                        if(value.id == 41084) {
+                            floor_one = _.split(value.image_url, '?');
+                            floor_one = floor_one[0];
+                        }
+                        if (value.id == 41085) {
+                            floor_two = _.split(value.image_url, '?');
+                            floor_two = floor_two[0];
+                        }
+                    });
+                    this.floorOne = floor_one;
+                    this.floorTwo = floor_two;
                 },
                 floorList () {
                     var floor_list = [];
