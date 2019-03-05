@@ -157,7 +157,7 @@
                     
                     var floor_1 = {};
                     floor_1.id = "first-floor";
-                    floor_1.title = "Level One";
+                    floor_1.title = "P1 Level";
                     floor_1.map = this.floorOne;
                     // floor_1.minimap = this.miniOne;
                     floor_1.z_index = 1;
