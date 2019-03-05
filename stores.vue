@@ -149,8 +149,8 @@
                                 floor_two = floor_two[0];
                             }
                             if (value.id == 49684) {
-                                floor_two = _.split(value.image_url, '?');
-                                floor_two = floor_two[0];
+                                floor_three = _.split(value.image_url, '?');
+                                floor_three = floor_three[0];
                             }
                         });
                         this.floorOne = floor_one;
