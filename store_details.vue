@@ -196,14 +196,14 @@
                             floor_list.push(floor_2);
                         }
                         else if (this.currentStore.z_coordinate == 2) {
-                            var floor_2 = {};
-                            floor_2.id = "second-floor";
-                            floor_2.title = "Level 2";
-                            floor_2.map = _.find(floor_maps, function(o){ return _.toNumber(o.id) == _.toNumber(49684);}).image_url;
-                            floor_2.z_index = 2;
-                            floor_2.show = true;
+                            var floor_3 = {};
+                            floor_3.id = "second-floor";
+                            floor_3.title = "Level 2";
+                            floor_3.map = _.find(floor_maps, function(o){ return _.toNumber(o.id) == _.toNumber(49684);}).image_url;
+                            floor_3.z_index = 2;
+                            floor_3.show = true;
                             
-                            floor_list.push(floor_2);
+                            floor_list.push(floor_3);
                             49684
                         }
                     }
