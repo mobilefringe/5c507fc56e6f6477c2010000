@@ -134,6 +134,7 @@
                 },
                 getSVGMap() {
                     var svg_maps = this.findRepoByName("SVG Maps").images 
+                    if(svg_maps && svg_maps.images)
                     var floor_one = "";
                     var floor_two = "";
                     _.forEach(svg_maps, function(value, key) {
