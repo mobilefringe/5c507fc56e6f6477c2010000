@@ -224,7 +224,7 @@
                             floor_1.title = "P1 Level";
                             floor_1.map = _.find(floor_maps, function(o){ return _.toNumber(o.id) == _.toNumber(49685);}).image_url;
                             floor_1.z_index = 1;
-                            floor_1.show = true;
+                            floor_1.show = false;
                             
                             floor_list.push(floor_1);
                         } else if (this.currentStore.z_coordinate == 1) {
@@ -233,7 +233,7 @@
                             floor_2.title = "Level 1";
                             floor_2.map = _.find(floor_maps, function(o){ return _.toNumber(o.id) == _.toNumber(49683);}).image_url;
                             floor_2.z_index = 2;
-                            floor_2.show = false;
+                            floor_2.show = true;
                             
                             floor_list.push(floor_2);
                         }
