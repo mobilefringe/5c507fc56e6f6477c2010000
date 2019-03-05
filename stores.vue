@@ -166,7 +166,7 @@
                     
                     var floor_2 = {};
                     floor_2.id = "second-floor";
-                    floor_2.title = "Level Two";
+                    floor_2.title = "Level One";
                     floor_2.map = this.floorTwo;
                     // floor_2.minimap = this.miniTwo;
                     floor_2.z_index = 2;
