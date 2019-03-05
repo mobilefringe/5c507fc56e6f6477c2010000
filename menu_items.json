@@ -8,14 +8,6 @@
             {
                 "name": "Store Directory",
                 "href": "/stores"
-            },
-            {
-                "name": "Business Directory",
-                "href": "/businesses"
-            },
-            {
-                "name": "Restaurants",
-                "href": "/restaurants"
             }
         ]
     },
