@@ -47,7 +47,8 @@
                     pageBanner: null,
                     selected: "Select a Category",
                     floorOne: null,
-                    floorTwo: null
+                    floorTwo: null,
+                    floorThree: null
                 }
             },
             created (){
@@ -135,20 +136,20 @@
                 getSVGMap() {
                     var svg_maps = this.findRepoByName("SVG Maps") 
                     if(svg_maps && svg_maps.images) {
-                    var floor_one = "";
-                    var floor_two = "";
-                    _.forEach(svg_maps, function(value, key) {
-                        if(value.id == 41084) {
-                            floor_one = _.split(value.image_url, '?');
-                            floor_one = floor_one[0];
-                        }
-                        if (value.id == 41085) {
-                            floor_two = _.split(value.image_url, '?');
-                            floor_two = floor_two[0];
-                        }
-                    });
-                    this.floorOne = floor_one;
-                    this.floorTwo = floor_two;
+                        var floor_one = "";
+                        var floor_two = "";
+                        _.forEach(svg_maps, function(value, key) {
+                            if(value.id == 41084) {
+                                floor_one = _.split(value.image_url, '?');
+                                floor_one = floor_one[0];
+                            }
+                            if (value.id == 41085) {
+                                floor_two = _.split(value.image_url, '?');
+                                floor_two = floor_two[0];
+                            }
+                        });
+                        this.floorOne = floor_one;
+                        this.floorTwo = floor_two;
                     }
                 },
                 floorList () {
