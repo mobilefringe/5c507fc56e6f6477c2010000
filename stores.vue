@@ -159,7 +159,6 @@
                     floor_1.id = "first-floor";
                     floor_1.title = "P1 Level";
                     floor_1.map = this.floorOne;
-                    // floor_1.minimap = this.miniOne;
                     floor_1.z_index = 1;
                     floor_1.show = true;
                     floor_list.push(floor_1);
@@ -168,7 +167,6 @@
                     floor_2.id = "second-floor";
                     floor_2.title = "Level 1";
                     floor_2.map = this.floorTwo;
-                    // floor_2.minimap = this.miniTwo;
                     floor_2.z_index = 2;
                     floor_2.show = false;
                     floor_list.push(floor_2);
@@ -177,7 +175,6 @@
                     floor_3.id = "third-floor";
                     floor_3.title = "Level 2";
                     floor_3.map = this.floorTwo;
-                    // floor_2.minimap = this.miniTwo;
                     floor_3.z_index = 2;
                     floor_3.show = false;
                     floor_list.push(floor_3);
