@@ -173,6 +173,15 @@
                     floor_2.show = false;
                     floor_list.push(floor_2);
                     
+                    var floor_3 = {};
+                    floor_3.id = "second-floor";
+                    floor_3.title = "Level Two";
+                    floor_3.map = this.floorTwo;
+                    // floor_2.minimap = this.miniTwo;
+                    floor_3.z_index = 2;
+                    floor_3.show = false;
+                    floor_list.push(floor_3);
+                    
                     return floor_list;
                 }
             },
