@@ -147,6 +147,10 @@
                                 floor_two = _.split(value.image_url, '?');
                                 floor_two = floor_two[0];
                             }
+                            if (value.id == 49683) {
+                                floor_two = _.split(value.image_url, '?');
+                                floor_two = floor_two[0];
+                            }
                         });
                         this.floorOne = floor_one;
                         this.floorTwo = floor_two;
