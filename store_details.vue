@@ -215,7 +215,7 @@
                     var floor_list = [];
                     // Get SVG Maps from Repo
                     var floor_maps_repo = this.findRepoByName('SVG Maps');
-                    
+                    console.log("currentStore", this.currentStore)
                     if(floor_maps_repo && floor_maps_repo.images){
                         floor_maps = floor_maps_repo.images;
                         if (this.currentStore.z_coordinate == 1) {
