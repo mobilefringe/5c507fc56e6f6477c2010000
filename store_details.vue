@@ -225,6 +225,51 @@
                     if (this.currentStore === null || this.currentStore === undefined){
                         this.$router.replace({ path: '/'});
                     }
+                    else {
+                        this.currentStore.zoom = 2;
+                    if (_.includes(this.currentStore.store_front_url_abs, 'missing')) {
+                      this.currentStore.no_store_logo = true
+                    } else {
+                      this.currentStore.no_store_logo = false
+                    }
+                    if (!this.currentStore.svgmap_region) {
+                          this.currentStore.svgmap_region = this.currentStore.id
+                        }
+                    
+                    var vm = this;
+                    if (this.currentStore.store_hours) {
+                        var storeHours = [];
+                        _.forEach(this.currentStore.store_hours, function (value, key) {
+                            storeHours.push(vm.findHourById(value));
+                        });
+                        this.hours = storeHours;
+                    }
+                    
+                    var temp_promo = [];
+                    var temp_job = [];
+                    _.forEach(this.currentStore.promotions, function(value, key) {
+                        var current_promo = vm.findPromoById(value);
+                        current_promo.description_short = _.truncate(current_promo.description, {
+                            'length': 70
+                        });
+                        // if (_.includes(current_promo.image_url, 'missing')) {
+                        //     current_promo.image_url = "//codecloud.cdn.speedyrails.net/sites/5c507fc56e6f6477c2010000/image/jpeg/1548062300000/Mall_StoreLogo_600x600px_Template.jpg"; 
+                        // } else {
+                        //     current_promo.image_url = current_promo.image_url;
+                        // }
+                        temp_promo.push(current_promo);
+                    });
+                    _.forEach(this.currentStore.jobs, function(value, key) {
+                        var current_job = vm.findJobById(value);
+                        current_job.description_short = _.truncate(current_job.description, {
+                            'length': 70
+                        });
+                        temp_job.push(current_job);
+
+                    })
+                    this.promotions = temp_promo;
+                    this.jobs = temp_job;
+                    }
                 },
                 updateSVGMap(map) {
                     this.map = map;
