@@ -274,6 +274,7 @@
                     this.svgMapRef.addActiveClass(this.currentStore.svgmap_region);
                 },
                 dropPin(store) {
+                    console.log("Store", store)
                     this.svgMapRef.showLocation(store.svgmap_region);
                 },
             }
