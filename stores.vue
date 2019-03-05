@@ -147,7 +147,7 @@
                                 floor_two = _.split(value.image_url, '?');
                                 floor_two = floor_two[0];
                             }
-                            if (value.id == 49683) {
+                            if (value.id == 49684) {
                                 floor_two = _.split(value.image_url, '?');
                                 floor_two = floor_two[0];
                             }
