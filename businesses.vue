@@ -46,6 +46,9 @@
                     dataLoaded: false,
                     pageBanner: null,
                     selected: "Select a Category",
+                    floorOne: null,
+                    floorTwo: null,
+                    floorThree: null
                 }
             },
             created (){
@@ -121,28 +124,71 @@
                             value.svgmap_region = value.id;
                         }
                     });
-                    var initZoom = {};
-                    initZoom.svgmap_region = "init";
-                    initZoom.z_coordinate = 1;
-                    initZoom.x = 0.5;
-                    initZoom.y = 0.5;
-                    initZoom.zoom = 1;
-                    all_stores.push(initZoom)
+                    // var initZoom = {};
+                    // initZoom.svgmap_region = "init";
+                    // initZoom.z_coordinate = 1;
+                    // initZoom.x = 0.5;
+                    // initZoom.y = 0.5;
+                    // initZoom.zoom = 0.5;
+                    // all_stores.push(initZoom)
                     return all_stores
+                },
+                getSVGMap() {
+                    var svg_maps = this.findRepoByName("SVG Maps");
+                    if(svg_maps && svg_maps.images) {
+                        svg_maps = svg_maps.images;
+                        var floor_one = "";
+                        var floor_two = "";
+                        var floor_three = "";
+                        _.forEach(svg_maps, function(value, key) {
+                            if(value.id == 49685) {
+                                floor_one = _.split(value.image_url, '?');
+                                floor_one = floor_one[0];
+                            }
+                            if (value.id == 49683) {
+                                floor_two = _.split(value.image_url, '?');
+                                floor_two = floor_two[0];
+                            }
+                            if (value.id == 49684) {
+                                floor_three = _.split(value.image_url, '?');
+                                floor_three = floor_three[0];
+                            }
+                        });
+                        this.floorOne = floor_one;
+                        this.floorTwo = floor_two;
+                        this.floorThree = floor_three;
+                    }
                 },
                 floorList () {
                     var floor_list = [];
                     
                     var floor_1 = {};
                     floor_1.id = "first-floor";
-                    floor_1.title = "Level One";
-                    floor_1.map = this.getSVGMap;
-                    // floor_1.minimap = this.miniOne;
-                    floor_1.z_index = null;
-                    floor_1.show = true;
+                    floor_1.title = "P1 Level";
+                    floor_1.map = this.floorOne;
+                    floor_1.z_index = 0;
+                    floor_1.show = false;
                     floor_list.push(floor_1);
+                    
+                    var floor_2 = {};
+                    floor_2.id = "second-floor";
+                    floor_2.title = "Level 1";
+                    floor_2.map = this.floorTwo;
+                    floor_2.z_index = 1;
+                    floor_2.show = true;
+                    floor_list.push(floor_2);
+                    
+                    var floor_3 = {};
+                    floor_3.id = "third-floor";
+                    floor_3.title = "Level 2";
+                    floor_3.map = this.floorThree;
+                    floor_3.z_index = 2;
+                    floor_3.show = false;
+                    floor_list.push(floor_3);
+                    
                     return floor_list;
                 }
+            },
             },
             methods: {
                 loadData: async function() {
