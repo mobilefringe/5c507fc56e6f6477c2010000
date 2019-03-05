@@ -119,15 +119,6 @@
                     this.updateCurrentStore(this.id);
                 });
             },
-            watch: {
-                currentStore: function() {
-                    
-                    
-                    // setTimeout(function() {
-                    //     vm.addLandmark(vm.currentStore);
-                    // }, 500);
-                },
-            },
             computed: {
                 ...Vuex.mapGetters([
                     'property',
