@@ -174,7 +174,7 @@
                     floor_list.push(floor_2);
                     
                     var floor_3 = {};
-                    floor_3.id = "second-floor";
+                    floor_3.id = "third-floor";
                     floor_3.title = "Level Two";
                     floor_3.map = this.floorTwo;
                     // floor_2.minimap = this.miniTwo;
