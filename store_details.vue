@@ -233,7 +233,7 @@
                             floor_2.title = "Level 1";
                             floor_2.map = _.find(floor_maps, function(o){ return _.toNumber(o.id) == _.toNumber(49683);}).image_url;
                             floor_2.z_index = 2;
-                            floor_2.show = true;
+                            floor_2.show = false;
                             
                             floor_list.push(floor_2);
                         }
