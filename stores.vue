@@ -46,6 +46,8 @@
                     dataLoaded: false,
                     pageBanner: null,
                     selected: "Select a Category",
+                    floorOne: null,
+                    floorTwo: null,
                 }
             },
             created (){
