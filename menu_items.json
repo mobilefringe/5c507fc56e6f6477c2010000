@@ -72,6 +72,10 @@
             {
                 "name": "About",
                 "href": "/pages/langhamsquare-about-us"
+            },
+            {
+                "name": "Career",
+                "href": "/jobs"
             }
         ]
     }
