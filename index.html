@@ -49,8 +49,7 @@
     							    <span @click="toggleSiteMap()">Site Map</span> |
     							    <router-link to="/contact_us">Management Office</router-link> | <br class="show_phone"> 
     							    <router-link to="/leasing">Leasing</router-link> | 
-    							    <router-link :to="'/pages/'+$root.site+'-privacy-policy'">Privacy Policy</router-link> | 
-    							    <a href="/login" target="_blank">Admin Login</a>  |
+    							    <router-link :to="'/pages/'+$root.site+'-privacy-policy'">Privacy Policy</router-link> |
     							    <router-link to="/jobs">Careers</router-link> 
 							    </p>
     							<p class="" v-if="property"> {{property.address1}}, {{property.city}}, {{property.postal_code}} {{property.province_state}} <span v-if="property.contact_phone">-  {{property.contact_phone}}</span></p>
