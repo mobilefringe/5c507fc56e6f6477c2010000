@@ -2,7 +2,7 @@
     {
         "name": "Home",
         "id": "home_link",
-        "href": "/events",
+        "href": "/",
         "show_sub_menu": false
     },
     {
