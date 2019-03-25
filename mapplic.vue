@@ -346,6 +346,7 @@
                             }
                             
                             temp_val.about = _.truncate(val.description, { 'length':200, 'separator': ' ' });
+                            temp_val.description = _.truncate(val.description, { 'length':200, 'separator': ' ' });
                             if(val.categories != null) {
                                 if(val.categories.length>1){
                                 temp_val.category = val.categories[1];
