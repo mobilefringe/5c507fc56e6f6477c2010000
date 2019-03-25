@@ -33,7 +33,7 @@
 			<div class="col-md-4 store_details_container">
 				<div>
 					<h1>{{currentStore.name}}<span v-if="currentStore.name_2"><br/>({{currentStore.name_2}})</span></h1>
-					<p v-if="currentStore.unit">Unit #:{{currentStore.unit}}</p>
+					<p> <span  v-if="currentStore.unit"></span>Unit #: {{currentStore.unit}}</p>
 					<p v-if="currentStore.phone">{{currentStore.phone}}</p>
 					<p v-if="currentStore.email">{{currentStore.email}}</p>
 					<div class="margin_20" v-if="currentStore.website">
