@@ -346,7 +346,7 @@
                             }
                             
                             temp_val.about = _.truncate(val.description, { 'length':200, 'separator': ' ' });
-                            temp_val.description = "<div><p>"+val.neighbourhood+"</p></div>"
+                            temp_val.description = "<div><p>"+val.unit " " + val.z_coordinate+"</p><p>"+val.neighbourhood+"</p></div>"
                             //_.truncate(val.description, { 'length':200, 'separator': ' ' });
                             if(val.categories != null) {
                                 if(val.categories.length>1){
