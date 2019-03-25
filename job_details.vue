@@ -67,7 +67,7 @@
 		        <div class="col-sm-5 job_div_dets">
 		            <p class="promo_div_name">{{job.name}}</p>
 		            <p class="promo_div_job_name">{{job.store.name | uppercase}}</p>
-		            <p class="promo_div_date">{{job.start_date | moment("MMM D, YYYY", timezone)}} - {{job.end_date | moment("MMM D", timezone)}}</p>
+		            <p class="promo_div_date">{{job.start_date | moment("MMM D, YYYY", timezone)}} - {{job.end_date | moment("MMM D, YYYY", timezone)}}</p>
 		            <p class="promo_div_description">{{job.description_short}}</p>
 					<span class="feature_read_more">
 						<router-link :to="'/jobs/'+job.slug" class="mobile_readmore" >
