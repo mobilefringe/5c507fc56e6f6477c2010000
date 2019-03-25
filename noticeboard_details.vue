@@ -5,7 +5,7 @@
 				<!--<img v-if="_.includes(currentEvent.image_url, 'missing') != true" :src="currentEvent.image_url" :alt="currentEvent.name"/>-->
 	 				<div>
     					<h1>{{currentEvent.title}}</h1>
-    					<p class="event_div_date">{{currentEvent.publish_date | moment("MMM D", timezone)}}</p>
+    					<p class="event_div_date">{{currentEvent.publish_date | moment("MMM D, YYYY", timezone)}}</p>
     				</div>
 				<div class="event_desc_container">
     				<div class="text-left event_description">
