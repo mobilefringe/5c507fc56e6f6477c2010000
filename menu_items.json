@@ -1,5 +1,11 @@
 [
     {
+        "name": "Home",
+        "id": "events_link",
+        "href": "/events",
+        "show_sub_menu": false
+    },
+    {
         "name": "Directory",
         "id": "stores_link",
         "href": "",
