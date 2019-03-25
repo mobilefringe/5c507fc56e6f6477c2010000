@@ -10,7 +10,7 @@
     				<!--</div>-->
     				<div class="col-sm-12 promo_div_dets text-left">
     					<p class="promo_div_name">{{promo.title}}</p>
-    					<p class="promo_div_date">{{promo.publish_date | moment("MMM D", timezone)}}</p>
+    					<p class="promo_div_date">{{promo.publish_date | moment("MMM D, YYYY", timezone)}}</p>
     					<p class="promo_div_description">{{$root.truncate(promo.body,150)}}</p>
     					<div class="promo_feature_share">
         					<span class="feature_read_more">
