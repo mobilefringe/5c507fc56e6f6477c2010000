@@ -55,8 +55,8 @@
 				</div>
 			</div>
 			<div class="col-md-8 store_desc_container">
-				<div class="text-left store_description" v-html="currentStore.description">
-					<p>{{currentStore.description}}</p>
+				<div class="text-left store_description" v-html="currentStore.rich_description">
+					<!--<p>{{currentStore.description}}</p>-->
 				</div>
 			</div>
 		</div>
