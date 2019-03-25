@@ -35,7 +35,7 @@
 					<h1>{{currentStore.name}}<span v-if="currentStore.name_2"><br/>({{currentStore.name_2}})</span></h1>
 					<p v-if="currentStore.category_name">{{currentStore.category_name}}</p>
 					<p v-if="currentStore.phone">{{currentStore.phone}}</p>
-					<p>{{currentStore.email}}</p>
+					<p v-if="currentStore.email">{{currentStore.email}}</p>
 					<div class="margin_20">
 					    <a v-bind:href="'//'+currentStore.website" target="_blank">Visit Store Website</a>    
 					</div>
