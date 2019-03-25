@@ -92,7 +92,7 @@
                     var blogs = this.findBlogBySlug('langhamsquare-noticeboard');
                     if(blogs && blogs.posts){
                         temp_promo = blogs.posts;//blogs.map(function(o){})
-                        console.log(_.sortBy(temp_promo, [function(o) { return o.publish_date; }]));
+                        temp_promo = _.sortBy(temp_promo, [function(o) { return o.publish_date; }]);
                     }
                     return temp_promo;
                 }
