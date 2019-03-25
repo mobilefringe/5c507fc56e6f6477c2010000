@@ -28,7 +28,7 @@
 				<div style="margin-left:0; margin-top: 25px;">
 					<h1>{{currentJob.name}}</h1>
     				<p class="job_store_name">{{currentJob.store.name}} <span v-if="currentJob.store.name_2">({{currentJob.store.name_2}})</span></p>
-    				<p class="job_div_date">{{currentJob.start_date | moment("MMM D", timezone)}} - {{currentJob.end_date | moment("MMM D", timezone)}}</p>
+    				<p class="job_div_date">{{currentJob.start_date | moment("MMM D, YYYY", timezone)}} - {{currentJob.end_date | moment("MMM D", timezone)}}</p>
 				</div>
 			</div>
 			<div class="col-sm-8 job_image_container text-left">
