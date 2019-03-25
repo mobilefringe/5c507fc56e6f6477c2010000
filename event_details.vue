@@ -13,7 +13,7 @@
 				<div class="event_details_container text-left">
     				<div>
     					<h1>{{currentEvent.name}}</h1>
-    					<p class="event_div_date">{{currentEvent.start_date | moment("MMM D, YYYY", timezone)}} - {{currentEvent.end_date | moment("MMM D", timezone)}}</p>
+    					<p class="event_div_date">{{currentEvent.start_date | moment("MMM D, YYYY", timezone)}} - {{currentEvent.end_date | moment("MMM D, YYYY", timezone)}}</p>
     				</div>
     			</div>
 			</div>
@@ -52,7 +52,7 @@
 		        </div>
 		        <div class="col-sm-5 promo_div_dets">
 		            <p class="promo_div_name promo_div_event_name">{{promo.name | uppercase}}</p>
-		            <p class="promo_div_date">{{promo.start_date | moment("MMM D", timezone)}} - {{promo.end_date | moment("MMM D", timezone)}}</p>
+		            <p class="promo_div_date">{{promo.start_date | moment("MMM D, YYYY", timezone)}} - {{promo.end_date | moment("MMM D", timezone)}}</p>
 		            <p class="promo_div_description">{{promo.description_short}}</p>
 					<span class="feature_read_more">
 						<router-link :to="'/events/'+promo.slug" class="mobile_readmore" >
