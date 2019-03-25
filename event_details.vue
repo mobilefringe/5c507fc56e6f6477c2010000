@@ -13,7 +13,7 @@
 				<div class="event_details_container text-left">
     				<div>
     					<h1>{{currentEvent.name}}</h1>
-    					<p class="event_div_date">{{currentEvent.start_date | moment("MMM D", timezone)}} - {{currentEvent.end_date | moment("MMM D", timezone)}}</p>
+    					<p class="event_div_date">{{currentEvent.start_date | moment("MMM D, YYYY", timezone)}} - {{currentEvent.end_date | moment("MMM D", timezone)}}</p>
     				</div>
     			</div>
 			</div>
@@ -39,7 +39,7 @@
                 </social-sharing>
 			</div>
 		</div>
-		<div class="event_promo_container page_container" v-if="storePromos && storePromos.length > -">
+		<div class="event_promo_container page_container" v-if="storePromos && storePromos.length > 0">
 		    <div class="promo_container_title text-left all_caps"> OTHER {{property.name | uppercase }} EVENTS</div>
 		    <div class="row event_promo_dets text-left is-table-row border_bottom" v-for="promo in storePromos">
 		        <div class="col-sm-7" >
