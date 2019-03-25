@@ -17,7 +17,7 @@
         "href": "/promotions",
         "show_sub_menu": false
     },
-        {
+    {
         "name": "Events",
         "id": "events_link",
         "href": "/events",
