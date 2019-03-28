@@ -113,6 +113,7 @@
                     correctValNum: null,
                     validNumError: false,
                     currentPage : null,
+                    currentPage2: nullm
                     sideImage: null
                 }
             },
