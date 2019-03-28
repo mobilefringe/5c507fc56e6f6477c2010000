@@ -155,30 +155,48 @@
             methods: {
                 validateBeforeSubmit() {
                     this.$validator.validateAll().then((result) => {
-                    if (result) {
-                        let errors = this.errors;
-                        send_data = {};
-                        send_data.form_data = JSON.stringify(Utility.serializeObject(this.form_data));
-                        this.$store.dispatch("POST_TO_MM", send_data).then(res => {
-                            this.formSuccess = true;
-                        }).catch(error => {
-                            try {
-                                if (error.response.status == 401) {
-                                    console.log("Data load error: " + error.message);
-                                    this.formError = true;
-                                } 
-                                else {
-                                    console.log("Data load error: " + error.message);
-                                    this.formError = true;
-                                }
-                            } 
-                            catch (e) {
-                                console.log("Data load error: " + error.message);
-                                this.formError = true;
-                            }
-                        })
+                        if (result) {
+                            let errors = this.errors;
+                            // send_data = {};
+                            // send_data.form_data = JSON.stringify(Utility.serializeObject(this.form_data));
+                            // this.$store.dispatch("POST_TO_MM", send_data).then(res => {
+                            //     this.formSuccess = true;
+                            // }).catch(error => {
+                            //     try {
+                            //         if (error.response.status == 401) {
+                            //             console.log("Data load error: " + error.message);
+                            //             this.formError = true;
+                            //         } 
+                            //         else {
+                            //             console.log("Data load error: " + error.message);
+                            //             this.formError = true;
+                            //         }
+                            //     } 
+                            //     catch (e) {
+                            //         console.log("Data load error: " + error.message);
+                            //         this.formError = true;
+                            //     }
+                            // })
+                            let send_data = new FormData()
+      send_data.append('mailto', 'sankavy@mobilefringe.com')
+      send_data.append('from_email', this.form_data.email)
+      send_data.append('subject', this.property.name + ' Contact Form')
+      send_data.append('custom[Name]', this.form_data.name)
+      send_data.append('custom[Email]', this.form_data.email)
+      send_data.append('custom[Message]', this.form_data.message)
+
+      let vm = this
+      fetch('https://www.mallmaverickstaging.com/custom_email.js', {
+        method: 'post',
+        body: send_data
+      })
+        .then(result => {
+          vm.formSuccess = true
+        })
+        .catch(error => {
+          vm.formError = true
+        })
                         }
-                    
                     })
                 },
                 loadData: async function() {
