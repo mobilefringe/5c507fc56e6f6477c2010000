@@ -6,7 +6,7 @@
                     <h1 class="text-left">
                         Website Support
                     </h1>
-                    <div class="description_text text_left" v-html="currentPage.body">
+                    <div class="description_text text_left" v-html="currentPage2.body">
                         We value your feedback. Send us your comments or questions by completing the contact form below.
                     </div>
                     <form class="form-horizontal padding_top_20" action="form-submit" @submit.prevent="validateBeforeSubmit">
