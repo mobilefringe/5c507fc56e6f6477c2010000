@@ -104,7 +104,7 @@
     define(["Vue", "vuex", "moment", "moment-timezone", "vue-moment", "vue-meta", 'vee-validate', 'utility'], function(Vue, Vuex, moment, tz, VueMoment, Meta, VeeValidate,Utility) {
         Vue.use(Meta);
         Vue.use(VeeValidate);
-        return Vue.component("contact-us-component", {
+        return Vue.component("website -support-component", {
             template: template, // the variable template will be injected
             data: function() {
                 return {
