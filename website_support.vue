@@ -174,7 +174,7 @@
                             //     }
                             // })
                             let send_data = new FormData()
-                            send_data.append('mailto', 'sankavy@mobilefringe.com')
+                            send_data.append('mailto', 'LanghamSquareWebsite@gmail.com')
                             send_data.append('from_email', this.form_data.email)
                             send_data.append('subject', this.property.name + ' Website Support Contact Form')
                             send_data.append('custom[Name]', this.form_data.name)
