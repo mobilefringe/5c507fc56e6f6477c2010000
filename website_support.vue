@@ -186,7 +186,7 @@
                             send_data.append('custom[Message]', this.form_data.message)
                             
                             let vm = this
-                            fetch('https://www.mallmaverickstaging.com/custom_email.js', {
+                            fetch('https://www.mallmaverick.com/custom_email.js', {
                             method: 'post',
                             body: send_data
                             })
