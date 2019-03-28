@@ -165,7 +165,7 @@ define([], function() {
             children: [{
                 path: '',
                 component: view('website_support'),
-                name: 'websitSupport'
+                name: 'websiteSupport'
             }]
         },
         {
