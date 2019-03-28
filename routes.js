@@ -160,13 +160,12 @@ define([], function() {
             }]
         },
         {
-            path: '/find_us',
+            path: '/website_support',
             component: view('default'),
-            redirect: '/404',
             children: [{
                 path: '',
-                component: view('find_us'),
-                name: 'findUs'
+                component: view('website_support'),
+                name: 'contactUs'
             }]
         },
         {
