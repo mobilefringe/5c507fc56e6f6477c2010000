@@ -191,10 +191,10 @@
                                 body: send_data
                             })
                             .then(result => {
-                              vm.formSuccess = true
+                                vm.formSuccess = true
                             })
                             .catch(error => {
-                              vm.formError = true
+                                vm.formError = true
                             })
                         }
                     })
