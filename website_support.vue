@@ -3,9 +3,9 @@
         <div class="margin_25_across padding_top_40" id="contact_us_container">
             <div class="row"> 
                 <div class="col-sm-8 contact_contents">
-                    <h2 class="text-left">
+                    <h1 class="text-left">
                         Website Support
-                    </h2>
+                    </h1>
                     <div class="description_text text_left">
                         We value your feedback. Send us your comments or questions by completing the contact form below.
                     </div>
