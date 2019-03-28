@@ -194,7 +194,7 @@
                                 this.formSuccess = true
                             })
                             .catch(error => {
-                                vm.formError = true
+                                this.formError = true
                             })
                         }
                     })
