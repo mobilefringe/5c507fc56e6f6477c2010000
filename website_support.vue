@@ -188,7 +188,7 @@
                             let vm = this
                             fetch('https://www.mallmaverick.com/custom_email.js', {
                             method: 'post',
-                            body: send_data
+                                body: send_data
                             })
                             .then(result => {
                               vm.formSuccess = true
