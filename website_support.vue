@@ -183,6 +183,7 @@
                             send_data.append('subject', this.property.name + ' Contact Form')
                             send_data.append('custom[Name]', this.form_data.name)
                             send_data.append('custom[Email]', this.form_data.email)
+                            send_data.append('custom[Phone]', this.form_data.phone)
                             send_data.append('custom[Message]', this.form_data.message)
                             
                             let vm = this
