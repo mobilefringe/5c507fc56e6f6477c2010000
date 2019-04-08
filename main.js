@@ -33,7 +33,7 @@ require.config({
         'vue-simple-spinner': 'https://cdn.jsdelivr.net/npm/vue-simple-spinner@1.2.8/dist/vue-simple-spinner.min',
         'loader' : 'https://mmvue.codecloudapp.com/loader.vue?noext',
         'vue-lazy-load': 'https://unpkg.com/vue-lazyload/vue-lazyload',
-        'bootstrap-vue' : '//unpkg.com/bootstrap-vue@latest/dist/bootstrap-vue',
+        // 'bootstrap-vue' : '//unpkg.com/bootstrap-vue@latest/dist/bootstrap-vue',
         //mappplic-png--map dependencies
         'mousewheel' : 'https://cdnjs.cloudflare.com/ajax/libs/jquery-mousewheel/3.1.13/jquery.mousewheel.min',
         'mapplic' : 'https://mmvue.codecloudapp.com/mapplic',
