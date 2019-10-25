@@ -220,7 +220,15 @@
                         if (this.currentStore.store_hours) {
                             var storeHours = [];
                             _.forEach(this.currentStore.store_hours, function (value, key) {
-                                storeHours.push(vm.findHourById(value));
+                                storeHours.push(_filter(vm.findHourById(value), function(o) {return o.day_of_week == 1}));
+                                
+                                
+                                 weekdayHours() {
+                                    var weekday_hours = this.getPropertyHours
+                                    return _.filter(weekday_hours, function(o) { return o.day_of_week == 1 });
+                                },
+                                
+                                
                             });
                             this.hours = storeHours;
                         }
