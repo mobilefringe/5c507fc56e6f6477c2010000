@@ -19,16 +19,18 @@
                 </div>
                 <div class="row">
                     <div class="col-md-12 ">
-                        <div class="padding_tb_30"></div>
-                        <h2 class="hours_heading text-left">Extended Holiday Hours</h2>
-                        <div id="holidays_hours_container" class="hours_container">
-                            <div class="hours_div text-left"  v-for="hour in reducedHolidays">
-                                <span>{{hour.holiday_name}} ({{hour.holiday_date | moment("MMM D YYYY", timezone)}})</span>
-                                <span>{{hour.open_time | moment("h:mm A", timezone)}} - {{hour.close_time | moment("h:mm A", timezone)}}</span>
+                        <div v-if="reducedHolidays">
+                            <div class="padding_tb_30"></div>
+                            <h2 class="hours_heading text-left">Extended Holiday Hours</h2>
+                            <div id="holidays_hours_container" class="hours_container">
+                                <div class="hours_div text-left"  v-for="hour in reducedHolidays">
+                                    <span>{{hour.holiday_name}} ({{hour.holiday_date | moment("MMM D YYYY", timezone)}})</span>
+                                    <span>{{hour.open_time | moment("h:mm A", timezone)}} - {{hour.close_time | moment("h:mm A", timezone)}}</span>
+                                </div>
                             </div>
-                        </div>
                         
-                        <div class="padding_tb_30"></div>
+                            <div class="padding_tb_30"></div>
+                        </div>
                         
                         <h2 class="hours_heading text-left">Holiday Closures</h2>
                         <div id="closed_hours_container" class="hours_container">
