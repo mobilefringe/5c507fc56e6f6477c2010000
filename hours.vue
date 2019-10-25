@@ -19,7 +19,7 @@
                 </div>
                 <div class="row">
                     <div class="col-md-12 ">
-                        <div v-if="reducedHolidays">
+                        <div v-if="reducedHolidays.length > 0">
                             <div class="padding_tb_30"></div>
                             <h2 class="hours_heading text-left">Extended Holiday Hours</h2>
                             <div id="holidays_hours_container" class="hours_container">
@@ -32,7 +32,7 @@
                             <div class="padding_tb_30"></div>
                         </div>
                         
-                        <div v-if="closeHolidays">
+                        <div v-if="closeHolidays.length > 0">
                             <h2 class="hours_heading text-left">Holiday Closures</h2>
                             <div id="closed_hours_container" class="hours_container">
                                 <div class="hours_div text-left" v-for="hour in closeHolidays">
