@@ -28,10 +28,8 @@
                                     <span>{{hour.open_time | moment("h:mm A", timezone)}} - {{hour.close_time | moment("h:mm A", timezone)}}</span>
                                 </div>
                             </div>
-                        
                             <div class="padding_tb_30"></div>
                         </div>
-                        
                         <div v-if="closeHolidays.length > 0">
                             <h2 class="hours_heading text-left">Holiday Closures</h2>
                             <div id="closed_hours_container" class="hours_container">
