@@ -124,10 +124,10 @@
                     _.forEach(promos_events, function(value, key) {
                         var today = moment.tz(this.timezone).format();
                         var showOnWebDate = moment.tz(value.show_on_web_date, this.timezone).format();
-                        if (today >= showOnWebDate) {
-                            value.description_short = _.truncate(value.description, {
-                                'length': 70
-                            });
+                        // if (today >= showOnWebDate) {
+                        //     value.description_short = _.truncate(value.description, {
+                        //         'length': 70
+                        //     });
                             
                             // if (value.store != null && value.store != undefined && _.includes(value.store.image_url, 'missing')) {
                             //     value.store.image_url = vm.property.default_logo_url;
