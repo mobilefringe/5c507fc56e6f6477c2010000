@@ -106,8 +106,10 @@
                     
                     console.log(temp_promo)
                     
-                    _.sortBy(temp_promo, [function(o) { return o.start_date; }]);
-                    return temp_promo;
+                    var sortedEvents = _.sortBy(temp_promo, [function(o) { return o.start_date; }]);
+                    console.log(sortedEvents)
+                    // return temp_promo;
+                    return sortedEvents;
                 }
             }
         });
