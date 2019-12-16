@@ -104,11 +104,7 @@
                         temp_promo.push(value);
                     });
                     
-                    console.log(temp_promo)
-                    
                     var sortedEvents = _.sortBy(temp_promo, [function(o) { return o.start_date; }]);
-                    console.log(sortedEvents)
-                    // return temp_promo;
                     return sortedEvents;
                 }
             }
