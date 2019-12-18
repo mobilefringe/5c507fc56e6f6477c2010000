@@ -25,6 +25,7 @@
       },
       beforeRouteUpdate (to, from, next) {
         this.meta = this.findMetaDataByPath(to.path);
+        console.log('to.path', to.path)
         next();
       },
       computed: {
