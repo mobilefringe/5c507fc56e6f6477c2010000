@@ -125,11 +125,13 @@
                     show_popup: false,
                     popup: null,
                     formData : {},
-                    meta: {
+                     meta: {
                         meta_title: "",
                         meta_description: "",
-                        meta_keywords: ""
+                        meta_keywords: "",
+                        meta_image: ""
                     }
+
                 }
             },
             created () {
