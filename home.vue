@@ -106,7 +106,6 @@
 
 <script>
     define(["Vue", "vuex", "vue!today_hours", 'vue!vue-slick','js-cookie'], function(Vue, Vuex, TodayHoursComponent, slick, Cookies) {
-        Vue.use(Meta);
         return Vue.component("home-component", {
             template: template, // the variable template will be injected
             data: function() {
