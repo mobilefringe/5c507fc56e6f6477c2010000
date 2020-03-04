@@ -186,7 +186,7 @@
                 },
                 
                 fiveBanners(){
-                    this.banners.slice(0,5);
+                    return this.banners.slice(0,5);
                 },
                 
                 banner_features () {
