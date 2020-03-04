@@ -184,6 +184,11 @@
                     })
                     return _.orderBy(banners, ['position'], ['asc']);
                 },
+                
+                fiveBanners(){
+                    this.banners.slice(0,5);
+                },
+                
                 banner_features () {
                     return  _.slice(this.$store.state.feature_items, 0, 2);
                 },
