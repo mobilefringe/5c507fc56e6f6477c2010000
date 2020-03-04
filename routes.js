@@ -5,16 +5,19 @@ define([], function() {
         }
     }
     return[ {
-        path: "/", component: e("home")
-    }
-    , {
-        path:"/stores", component:e("default"), children:[ {
+        path: "/", 
+        component: e("home")
+    }, {
+        path:"/stores", 
+        component:e("default"), 
+        children:[ {
             path: "", component: e("stores"), name: "storeList"
-        }
-        , {
-            path: ":id", component: e("store_details"), name: "storeDetails", props: !0
-        }
-        ]
+        }, {
+            path: ":id", 
+            component: e("store_details"), 
+            name: "storeDetails", 
+            props: !0
+        }]
     }
     , {
         path:"/businesses", component:e("default"), children:[ {
