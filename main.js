@@ -42,11 +42,12 @@ require.config({
         //google map dependcies
         'google-map-api': 'https://maps.googleapis.com/maps/api/js?key=AIzaSyCukCjH3fsuDYBdI44hZKL43m60jEToJjY',
         'google_map': 'https://mmvue.codecloudapp.com/google_map.vue?noext',
+        //google translate
         "google-translate" : "https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit",
     }
 });
 
-require(['Vue', 'vuex', 'vue2-filters', 'vue_router', 'routes', 'datastore', 'vue-i18n', 'locales','jquery', 'moment', "vue-meta", "moment-timezone", "vue-moment",'vue-social-sharing','vue-select', "vue!search-component",'vue-simple-spinner','vue!loader.vue', 'vue!header.vue', 'json!menu_items.json'], function (Vue, Vuex, Vue2Filters, VueRouter, appRoutes, store, VueI18n, messages,$, moment, Meta, tz, VueMoment, SocialSharing, VueSelect, SearchComponent, Spinner, Loader, Header, MenuItems) {
+require(['Vue', 'vuex', 'vue2-filters', 'vue_router', 'routes', 'datastore', 'vue-i18n', 'locales','jquery', 'moment', "vue-meta", "moment-timezone", "vue-moment",'vue-social-sharing','vue-select', "vue!search-component",'vue!loader.vue', 'vue!header.vue', 'json!menu_items.json'], function (Vue, Vuex, Vue2Filters, VueRouter, appRoutes, store, VueI18n, messages,$, moment, Meta, tz, VueMoment, SocialSharing, VueSelect, SearchComponent, Spinner, Loader, Header, MenuItems) {
     Vue.use(Meta, {
        keyName: 'metaInfo', // the component option name that vue-meta looks for meta info on.
        tagIDKeyName: 'vmid' // the property name that vue-meta uses to determine whether to overwrite or append a tag
