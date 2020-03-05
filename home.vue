@@ -71,7 +71,7 @@
         				<div class="banner_features"  v-for="feature in banner_features">
         					<router-link :to="feature.url" class="hvr-grow-shadow">
         						<!--<img class="top_image" :src='feature.image_url' :alt="'Click here for more info on ' +feature.name"/>-->
-        						<img class="top_image" v-lazy="feature.image_url" :alt="'Click here for more info on ' +feature.name"/>
+        						<img class="top_image" :v-lazy="feature.image_url" :alt="'Click here for more info on ' +feature.name"/>
         						<div class="feature_overlay text-uppercase ">{{feature.name}}</div>
         					</router-link>
         				</div>
