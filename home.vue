@@ -81,10 +81,8 @@
         			<div class="feature-div clearfix">
         				<!--<span>-->
         					<div class="feature-box col-sm-4" v-for="item in feature_items">
-        						<!--<p class="feature-title">{{item.name}}</p>-->
-        						<!--<img :src="item.image_url" class="feature-image" :alt="'Click here for more info on '+item.name"/>-->
         						<router-link :to="item.url" class=" feature_link">
-            						<img class="hvr-grow-shadow" :src='item.image_url' :alt="'Click here for more info on ' +item.name"/>
+            						<img class="hvr-grow-shadow" v-lazy="item.image_url" :alt="'Click here for more info on ' +item.name"/>
             						<div class="feature_overlay text-uppercase ">{{item.name}}</div>
         					    </router-link>
         						<!--<p class="feature-html">{{item.html}}</p>-->
