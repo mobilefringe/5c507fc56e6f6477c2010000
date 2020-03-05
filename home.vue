@@ -59,7 +59,8 @@
         				<slick ref="slick" :options="slickOptions">
         					<div class="" v-for="banner in fiveBanners" v-if="banners">
         						<a v-if="banner.url" :href="banner.url">
-        						    <img :src="banner.image_url" class="hvr-grow-shadow" :alt="banner.name">
+        						    <!--<img :src="banner.image_url" class="hvr-grow-shadow" :alt="banner.name">-->
+        						    <img v-lazy="banner.image_url" class="hvr-grow-shadow" :alt="banner.name">
         						</a>
         						<img v-else :src="banner.image_url" class="hvr-grow-shadow" :alt="banner.name">
         					</div>
@@ -105,7 +106,7 @@
 </template>
 
 <script>
-    define(["Vue", "vuex", "vue!today_hours", 'vue!vue-slick','js-cookie'], function(Vue, Vuex, TodayHoursComponent, slick, Cookies) {
+    define(["Vue", "vuex", "vue!today_hours", 'vue!vue-slick','js-cookie', 'vue-lazy-load'], function(Vue, Vuex, TodayHoursComponent, slick, Cookies, VueLazyLoad) {
         return Vue.component("home-component", {
             template: template, // the variable template will be injected
             data: function() {
