@@ -59,8 +59,8 @@
         				<slick ref="slick" :options="slickOptions">
         					<div class="" v-for="banner in fiveBanners" v-if="banners">
         						<a v-if="banner.url" :href="banner.url">
-        						    <!--<img :src="banner.image_url" class="hvr-grow-shadow" :alt="banner.name">-->
-        						    <img :v-lazy="banner.image_url" class="hvr-grow-shadow" :alt="banner.name">
+        						    <img :src="banner.image_url" class="hvr-grow-shadow" :alt="banner.name">
+        						    <!--<img :v-lazy="banner.image_url" class="hvr-grow-shadow" :alt="banner.name">-->
         						</a>
         						<img v-else :src="banner.image_url" class="hvr-grow-shadow" :alt="banner.name">
         					</div>
@@ -70,7 +70,8 @@
         			<div class="top_two hidden_phone col-sm-3">
         				<div class="banner_features"  v-for="feature in banner_features">
         					<router-link :to="feature.url" class="hvr-grow-shadow">
-        						<img class="top_image" :src='feature.image_url' :alt="'Click here for more info on ' +feature.name"/>
+        						<!--<img class="top_image" :src='feature.image_url' :alt="'Click here for more info on ' +feature.name"/>-->
+        						<img class="top_image" v-lazy="feature.image_url" :alt="'Click here for more info on ' +feature.name"/>
         						<div class="feature_overlay text-uppercase ">{{feature.name}}</div>
         					</router-link>
         				</div>
