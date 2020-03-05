@@ -30,7 +30,7 @@ require.config({
         'vue-social-sharing': 'https://cdn.jsdelivr.net/npm/vue-social-sharing@2.3.1/dist/vue-social-sharing.min',
         'vee-validate' : 'https://cdn.jsdelivr.net/npm/vee-validate@2.1.4/dist/vee-validate',
         'lightbox': 'https://mmvue.codecloudapp.com/lightbox',
-        // 'vue-simple-spinner': 'https://cdn.jsdelivr.net/npm/vue-simple-spinner@1.2.8/dist/vue-simple-spinner.min',
+        'vue-simple-spinner': 'https://cdn.jsdelivr.net/npm/vue-simple-spinner@1.2.8/dist/vue-simple-spinner.min',
         'loader' : 'https://mmvue.codecloudapp.com/loader.vue?noext',
         'vue-lazy-load': 'https://unpkg.com/vue-lazyload/vue-lazyload',
         'bootstrap-vue' : 'https://codecloud.cdn.speedyrails.net/sites/59347e776e6f64538f150000/text/javascript/1554736414383/bootstrap-vue',
@@ -47,7 +47,7 @@ require.config({
     }
 });
 
-require(['Vue', 'vuex', 'vue2-filters', 'vue_router', 'routes', 'datastore', 'vue-i18n', 'locales','jquery', 'moment', "vue-meta", "moment-timezone", "vue-moment",'vue-social-sharing','vue-select', "vue!search-component",'vue!loader.vue', 'vue!header.vue', 'json!menu_items.json'], function (Vue, Vuex, Vue2Filters, VueRouter, appRoutes, store, VueI18n, messages,$, moment, Meta, tz, VueMoment, SocialSharing, VueSelect, SearchComponent, Spinner, Loader, Header, MenuItems) {
+require(['Vue', 'vuex', 'vue2-filters', 'vue_router', 'routes', 'datastore', 'vue-i18n', 'locales','jquery', 'moment', "vue-meta", "moment-timezone", "vue-moment",'vue-social-sharing','vue-select', "vue!search-component",'vue-simple-spinner','vue!loader.vue', 'vue!header.vue', 'json!menu_items.json'], function (Vue, Vuex, Vue2Filters, VueRouter, appRoutes, store, VueI18n, messages,$, moment, Meta, tz, VueMoment, SocialSharing, VueSelect, SearchComponent, Spinner, Loader, Header, MenuItems) {
     Vue.use(Meta, {
        keyName: 'metaInfo', // the component option name that vue-meta looks for meta info on.
        tagIDKeyName: 'vmid' // the property name that vue-meta uses to determine whether to overwrite or append a tag
