@@ -2,7 +2,7 @@ require.config({
     paths: {
         'Vue': 'https://cdnjs.cloudflare.com/ajax/libs/vue/2.5.13/vue',
         'vue_router': 'https://cdnjs.cloudflare.com/ajax/libs/vue-router/2.7.0/vue-router.min',
-        'axios': 'https://cdnjs.cloudflare.com/ajax/libs/axios/0.16.1/axios.min',
+        // 'axios': 'https://cdnjs.cloudflare.com/ajax/libs/axios/0.16.1/axios.min',
         'jquery': 'https://code.jquery.com/jquery-3.2.1.min',
         'lodash': 'https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.4/lodash.min',
         'moment': 'https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.18.1/moment-with-locales.min',
@@ -47,7 +47,7 @@ require.config({
     }
 });
 
-require(['Vue', 'vuex', 'vue2-filters', 'vue_router', 'routes', 'datastore', 'vue-i18n', 'locales','jquery', 'moment', "vue-meta", "moment-timezone", "vue-moment",'vue-social-sharing','vue-select', "vue!search-component",'vue-simple-spinner','vue!loader.vue', 'vue!header.vue', 'json!menu_items.json'], function (Vue, Vuex, Vue2Filters, VueRouter, appRoutes, store, VueI18n, messages,$, moment, Meta, tz, VueMoment, SocialSharing, VueSelect, SearchComponent, Spinner, Loader, Header, MenuItems) {
+require(['Vue', 'vuex', 'vue2-filters', 'vue_router', 'vue-lazy-load', 'routes', 'datastore', 'vue-i18n', 'locales','jquery', 'moment', "vue-meta", "moment-timezone", "vue-moment",'vue-social-sharing','vue-select', "vue!search-component",'vue-simple-spinner','vue!loader.vue', 'vue!header.vue', 'json!menu_items.json'], function (Vue, Vuex, Vue2Filters, VueRouter, VueLazyLoad, appRoutes, store, VueI18n, messages,$, moment, Meta, tz, VueMoment, SocialSharing, VueSelect, SearchComponent, Spinner, Loader, Header, MenuItems) {
     Vue.use(Meta, {
        keyName: 'metaInfo', // the component option name that vue-meta looks for meta info on.
        tagIDKeyName: 'vmid' // the property name that vue-meta uses to determine whether to overwrite or append a tag
