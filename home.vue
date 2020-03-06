@@ -57,7 +57,7 @@
         			<div class="main_banner col-sm-9">
         				<div  class="prev"></div>
         				<slick ref="slick" :options="slickOptions">
-        					<div class="" v-for="banner in fiveBanners" v-if="banners">
+        					<div class="" v-for="banner in banners" v-if="banners">
         						<a v-if="banner.url" :href="banner.url">
         						    <img v-lazy="banner.image_url" class="hvr-grow-shadow" :alt="banner.name">
         						</a>
@@ -183,10 +183,6 @@
                         }
                     })
                     return _.orderBy(banners, ['position'], ['asc']);
-                },
-                
-                fiveBanners(){
-                    return this.banners.slice(0,5);
                 },
                 
                 banner_features () {
