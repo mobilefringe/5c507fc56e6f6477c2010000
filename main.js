@@ -153,7 +153,7 @@ require(['Vue', 'vuex', 'vue2-filters', 'vue_router', 'vue-lazy-load', 'routes',
             changeLocale: function(val) {
                 this.locale = val; // this will update the data store, which in turn will trigger the watcher to update the locale in the system
             },
-            shareURL(page,slug){
+            shareURL(page, slug){
                 var share_url= "http://www.langhamsquare.ca/" + page + "/" + slug;
                 return share_url;
             },
