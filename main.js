@@ -1,6 +1,6 @@
 require.config({
     paths: {
-        'Vue': 'https://cdnjs.cloudflare.com/ajax/libs/vue/2.5.13/vue',
+        'Vue': 'https://cdnjs.cloudflare.com/ajax/libs/vue/2.5.13/vue.min',
         'vue_router': 'https://cdnjs.cloudflare.com/ajax/libs/vue-router/2.7.0/vue-router.min',
         'axios': 'https://cdnjs.cloudflare.com/ajax/libs/axios/0.16.1/axios.min',
         'jquery': 'https://code.jquery.com/jquery-3.2.1.min',
@@ -136,11 +136,12 @@ require(['Vue', 'vuex', 'vue2-filters', 'vue_router', 'vue-lazy-load', 'routes',
                     });
                     await Promise.all([this.$store.dispatch("getData", "property")]);
                     this.property.mm_host = this.property.mm_host.replace("http:", "");
-                    let results = await Promise.all([this.$store.dispatch("INITIALIZE_LOCALE")
-                        , this.$store.dispatch("getData", "hours")
-                        , this.$store.dispatch("getData", "stores"),
-                        this.$store.dispatch("getData", "promotions"),
-                        this.$store.dispatch("getData", "events")
+                    let results = await Promise.all([
+                        this.$store.dispatch("INITIALIZE_LOCALE"), 
+                        // this.$store.dispatch("getData", "hours"), 
+                        // this.$store.dispatch("getData", "stores"),
+                        // this.$store.dispatch("getData", "promotions"),
+                        // this.$store.dispatch("getData", "events")
                         ]);
                     await Promise.all([this.$store.dispatch("LOAD_META_DATA_NEW")]);
                     return results;
