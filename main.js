@@ -94,7 +94,6 @@ require(['Vue', 'vuex', 'vue2-filters', 'vue_router', 'vue-lazy-load', 'routes',
                 this.dataLoaded = true;
                 this.property.default_logo_url = "//codecloud.cdn.speedyrails.net/sites/5c507fc56e6f6477c2010000/image/jpeg/1548062300000/Mall_StoreLogo_600x600px_Template.jpg";
             });
-
         },
         watch: {
             // watcher to update vue-i18n when the locale has been changed by the user
@@ -124,7 +123,6 @@ require(['Vue', 'vuex', 'vue2-filters', 'vue_router', 'vue-lazy-load', 'routes',
                 'banners',
                 'hours',
                 'getTodayHours',
-
             ])
         },
         methods: {
